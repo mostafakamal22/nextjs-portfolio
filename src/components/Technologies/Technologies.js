@@ -1,5 +1,5 @@
 import React from "react";
-import { DiFirebase, DiReact, DiZend } from "react-icons/di";
+import { DiFirebase, DiReact } from "react-icons/di";
 import {
   Section,
   SectionDivider,
@@ -46,6 +46,7 @@ const Technologies = () => (
         </ListContainer>
       </ListItem>
     </List>
+    <SectionDivider />
   </Section>
 );
 
