@@ -1,4 +1,3 @@
-import { IoIosArrowDropdown } from "react-icons/io";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -18,15 +17,24 @@ export const Container = styled.div`
   }
 `;
 
+export const LogoLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+`;
+
 export const LogoText = styled.span`
   font-size: 2rem;
+  font-weight: bold;
 `;
 
 export const Div1 = styled.div`
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;
-  align-content: center;
+  justify-content: start;
+  align-items: center;
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 1 / 1 / 2 / 3;
   }
@@ -34,7 +42,9 @@ export const Div1 = styled.div`
 export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  gap: 5px;
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 2 / 2 / 3 / 5;
   }
@@ -52,6 +62,8 @@ export const Div3 = styled.div`
 
 // Navigation Links
 export const NavLink = styled.a`
+  display: inline-block;
+  position: relative;
   font-size: 2rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
@@ -61,54 +73,26 @@ export const NavLink = styled.a`
     opacity: 1;
     cursor: pointer;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    visibility: hidden;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover::after {
+    visibility: visible;
+    width: 100%;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
-  }
-`;
-
-/// DropDown Contact
-export const ContactDropDown = styled.button`
-  border: none;
-  display: flex;
-  position: relative;
-  background: none;
-  font-size: 1.7rem;
-
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    color: #fff;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
-  }
-`;
-
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
-  margin-left: 8px;
-  display: flex;
-  align-self: center;
-  transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? "1" : ".75")};
-  transform: ${({ isOpen }) => (isOpen ? "scaleY(-1)" : "scaleY(1)")};
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin: 2px 0 0 2px;
-    width: 15px;
   }
 `;
 
