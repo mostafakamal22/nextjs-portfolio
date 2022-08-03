@@ -12,13 +12,17 @@ const Hero = () => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Welcome to <br />
-        my PORTFOLIO
+        Welcome To <br />
+        My PORTFOLIO
       </SectionTitle>
 
-      <SectionText>I Am a MERN Developer.</SectionText>
+      <SectionText>I am Mostafa, a MERN Developer.</SectionText>
 
-      <Button>Contact Me</Button>
+      <Button>
+        <a style={{ color: "white" }} href="#footer">
+          Contact Me
+        </a>
+      </Button>
     </LeftSection>
   </Section>
 );

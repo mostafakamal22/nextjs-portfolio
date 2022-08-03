@@ -25,9 +25,9 @@ const Technologies = () => (
 
     <List>
       <ListItem>
-        <DiReact size="3rem" />
+        <DiReact size={40} />
         <ListContainer>
-          <ListTitle>Front-End</ListTitle>
+          <ListTitle>Front-End Frameworks</ListTitle>
           <ListParagraph>
             Experience With <br />
             ReactJS
@@ -36,7 +36,7 @@ const Technologies = () => (
       </ListItem>
 
       <ListItem>
-        <DiFirebase size="3rem" />
+        <DiFirebase size={40} />
         <ListContainer>
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
