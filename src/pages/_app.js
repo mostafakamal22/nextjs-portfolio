@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>MK WebDev || Everything You Need!</title>
+        <title>MK WebDev</title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Theme>
