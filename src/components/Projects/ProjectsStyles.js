@@ -44,10 +44,6 @@ export const StackTitle = styled(TitleContent)`
   align-items: center;
   gap: 0.25rem;
   font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
   font-size: 2rem;
   margin-top: 1rem;
   text-align: center;
@@ -123,7 +119,7 @@ export const TagList = styled.ul`
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 2rem;
+  padding: 0.5rem 2rem;
 `;
 export const Tag = styled.li`
   color: #d8bfbf;

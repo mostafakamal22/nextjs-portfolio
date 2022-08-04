@@ -22,6 +22,7 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
+import Button from "../../styles/GlobalComponents/Button";
 
 const Projects = () => (
   <Section id="projects">
@@ -62,6 +63,19 @@ const Projects = () => (
         );
       })}
     </GridContainer>
+
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Button>
+        <a
+          style={{ color: "white" }}
+          href="https://mostafakamal22.github.io/#my-work"
+          target="_blank"
+        >
+          More Projects
+        </a>
+      </Button>
+    </div>
+
     <SectionDivider />
   </Section>
 );
