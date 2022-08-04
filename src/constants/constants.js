@@ -8,6 +8,7 @@ import {
 } from "react-icons/di";
 import { SiAuthy, SiHtml5 } from "react-icons/si";
 
+//Projects Data
 export const projects = [
   {
     title: "MERN E-Bank System",
@@ -50,6 +51,7 @@ export const projects = [
   },
 ];
 
+//Technologies Data
 export const technologies = [
   {
     title: "Web Development Basics",
@@ -98,12 +100,15 @@ export const technologies = [
     title: "Authentication",
     paragraph: "Json Web Tokens(JWT).",
     icon: <SiAuthy size={40} />,
-    id: 6,
+    id: 7,
   },
   {
     title: "Version Control",
     paragraph: "Git And Github.",
     icon: <DiGitBranch size={40} />,
-    id: 6,
+    id: 8,
   },
 ];
+
+//Acomplishments data
+export const acomplishments = [{ number: "+15", text: "Projects" }];
