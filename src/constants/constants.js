@@ -8,6 +8,10 @@ import {
 } from "react-icons/di";
 import { SiAuthy, SiHtml5 } from "react-icons/si";
 
+import { IoCall } from "react-icons/io5";
+import { RiWhatsappFill } from "react-icons/ri";
+import { GrMail } from "react-icons/gr";
+
 //Projects Data
 export const projects = [
   {
@@ -112,3 +116,25 @@ export const technologies = [
 
 //Acomplishments data
 export const acomplishments = [{ number: "+15", text: "Projects" }];
+
+//Footer data
+export const contacts = [
+  {
+    title: "Call",
+    text: "+201008871950",
+    link: "tel:+201008871950",
+    icon: <IoCall size={15} />,
+  },
+  {
+    title: "Email",
+    text: "mk1319@fayoum.edu.eg",
+    link: "mailto:mk1319@fayoum.edu.eg",
+    icon: <GrMail size={15} />,
+  },
+  {
+    title: "WhatsApp",
+    text: "+201008871950",
+    link: "https://wa.me/201008871950",
+    icon: <RiWhatsappFill size={15} />,
+  },
+];

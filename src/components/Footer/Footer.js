@@ -1,5 +1,7 @@
 import React from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillHeart, AiFillLinkedin } from "react-icons/ai";
+import { contacts } from "../../constants/constants";
+import { SectionTitle } from "../../styles/GlobalComponents";
 
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
@@ -17,29 +19,41 @@ import {
 const Footer = () => {
   return (
     <FooterWrapper id="footer">
+      <SectionTitle>Contacts</SectionTitle>
       <LinkList>
-        <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:+201008871950">+201008871950</LinkItem>
-        </LinkColumn>
-        <LinkColumn>
-          <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:mk1319@fayoum.edu.eg">
-            mk1319@fayoum.edu.eg
-          </LinkItem>
-        </LinkColumn>
+        {contacts.map(({ title, text, icon, link }, index) => (
+          <LinkColumn key={index}>
+            <LinkTitle>
+              {title}
+              {icon}
+            </LinkTitle>
+            <LinkItem href={link} target="_blank">
+              {text}
+            </LinkItem>
+          </LinkColumn>
+        ))}
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>Everything You Need!</Slogan>
+          <Slogan>
+            Made With NextJs, TypeScript, Styled Components and{" "}
+            <AiFillHeart
+              style={{ color: "red", marginBottom: "-5px" }}
+              size={20}
+            />
+          </Slogan>
+          <Slogan>MK WebDev ©2022</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/mostafakamal22">
-            <AiFillGithub size="3rem" />
+          <SocialIcons href="https://github.com/mostafakamal22" target="_blank">
+            <AiFillGithub size={40} />
           </SocialIcons>
 
-          <SocialIcons href="https://linkedin.com/in/mostafakamal22/">
-            <AiFillLinkedin size="3rem" />
+          <SocialIcons
+            href="https://linkedin.com/in/mostafakamal22/"
+            target="_blank"
+          >
+            <AiFillLinkedin size={40} />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
