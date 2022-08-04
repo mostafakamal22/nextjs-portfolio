@@ -1,4 +1,6 @@
 import React from "react";
+import { AiFillCode, AiFillPlayCircle } from "react-icons/ai";
+import { RiStackFill } from "react-icons/ri";
 
 import {
   BlogCard,
@@ -12,6 +14,7 @@ import {
   TitleContent,
   UtilityList,
   Img,
+  StackTitle,
 } from "./ProjectsStyles";
 import {
   Section,
@@ -21,21 +24,24 @@ import {
 import { projects } from "../../constants/constants";
 
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section id="projects">
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
       {projects.map((p, i) => {
         return (
           <BlogCard key={i}>
-            <Img src={p.image} />
+            <Img src={p.image} loading="lazy" alt="Project" />
             <TitleContent>
-              <HeaderThree title>{p.title}</HeaderThree>
+              <HeaderThree title={1}>{p.title}</HeaderThree>
               <Hr />
             </TitleContent>
             <CardInfo className="card-info">{p.description}</CardInfo>
             <div>
-              <TitleContent>Stack</TitleContent>
+              <StackTitle>
+                Stack
+                <RiStackFill size={25} />
+              </StackTitle>
               <TagList>
                 {p.tags.map((t, i) => {
                   return <Tag key={i}>{t}</Tag>;
@@ -43,8 +49,14 @@ const Projects = () => (
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={p.visit}>Code</ExternalLinks>
-              <ExternalLinks href={p.source}>Source</ExternalLinks>
+              <ExternalLinks href={p.visit} target="_blank">
+                Demo
+                <AiFillPlayCircle size={20} />
+              </ExternalLinks>
+              <ExternalLinks href={p.source} target="_blank">
+                Source
+                <AiFillCode size={20} />
+              </ExternalLinks>
             </UtilityList>
           </BlogCard>
         );
