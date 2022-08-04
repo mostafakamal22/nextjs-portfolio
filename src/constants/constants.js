@@ -1,3 +1,13 @@
+import {
+  DiCss3,
+  DiCssdeck,
+  DiDatabase,
+  DiGitBranch,
+  DiMongodb,
+  DiReact,
+} from "react-icons/di";
+import { SiAuthy, SiHtml5 } from "react-icons/si";
+
 export const projects = [
   {
     title: "MERN E-Bank System",
@@ -37,6 +47,64 @@ export const projects = [
     source: "https://github.com/mostafakamal22/sprints-e-commerce-project",
     visit: "#0",
     id: 1,
+  },
+];
+
+export const technologies = [
+  {
+    title: "Web Development Basics",
+    paragraph: "HTML, CSS and JS(ES6).",
+    icon: <SiHtml5 size={40} />,
+    id: 0,
+  },
+  {
+    title: "CSS Preprocessors",
+    paragraph: "SASS",
+    icon: <DiCssdeck size={40} />,
+    id: 1,
+  },
+  {
+    title: "CSS Frameworks",
+    paragraph: "Bootstrap, Tailwind and Styled Components.",
+    icon: <DiCss3 size={40} />,
+    id: 2,
+  },
+  {
+    title: "Front-End Frameworks",
+    paragraph: "ReactJS",
+    icon: <DiReact size={40} />,
+    id: 3,
+  },
+  {
+    title: "Front-End State Management",
+    paragraph: "Redux, Redux-Toolkit And React-Context-Ruducer State System.",
+    icon: <DiReact size={40} />,
+    id: 4,
+  },
+
+  {
+    title: "Back-End",
+    paragraph: "NodeJS And MongoDB.",
+    icon: <DiDatabase size={40} />,
+    id: 5,
+  },
+  {
+    title: "Back-End Frameworks",
+    paragraph: "Express And Mongoose.",
+    icon: <DiMongodb size={40} />,
+    id: 6,
+  },
+  {
+    title: "Authentication",
+    paragraph: "Json Web Tokens(JWT).",
+    icon: <SiAuthy size={40} />,
+    id: 6,
+  },
+  {
+    title: "Version Control",
+    paragraph: "Git And Github.",
+    icon: <DiGitBranch size={40} />,
+    id: 6,
   },
 ];
 

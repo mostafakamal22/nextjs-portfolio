@@ -1,5 +1,6 @@
 import React from "react";
 import { DiFirebase, DiReact } from "react-icons/di";
+import { technologies } from "../../constants/constants";
 import {
   Section,
   SectionDivider,
@@ -16,7 +17,6 @@ import {
 
 const Technologies = () => (
   <Section id="tech">
-    <SectionDivider />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
       I've worked with a range of technologies in the world of web develpoment.
@@ -24,27 +24,18 @@ const Technologies = () => (
     </SectionText>
 
     <List>
-      <ListItem>
-        <DiReact size={40} />
-        <ListContainer>
-          <ListTitle>Front-End Frameworks</ListTitle>
-          <ListParagraph>
-            Experience With <br />
-            ReactJS
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-
-      <ListItem>
-        <DiFirebase size={40} />
-        <ListContainer>
-          <ListTitle>Back-End</ListTitle>
-          <ListParagraph>
-            Experience With <br />
-            NodeJS, Express And MongoDB
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
+      {technologies.map(({ id, title, paragraph, icon }) => (
+        <ListItem key={id}>
+          {icon}
+          <ListContainer>
+            <ListTitle>{title}</ListTitle>
+            <ListParagraph>
+              Experience With <br />
+              {paragraph}
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
+      ))}
     </List>
     <SectionDivider />
   </Section>
