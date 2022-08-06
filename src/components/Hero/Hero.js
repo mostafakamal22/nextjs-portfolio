@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Section,
   SectionText,
@@ -8,23 +7,25 @@ import {
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 
-const Hero = () => (
-  <Section row nopadding>
-    <LeftSection>
-      <SectionTitle main center>
-        Welcome To <br />
-        My PORTFOLIO
-      </SectionTitle>
+const Hero = ({ startAnimation }) => {
+  return (
+    <Section row nopadding>
+      <LeftSection startAnimation={startAnimation}>
+        <SectionTitle main center>
+          Welcome To <br />
+          My PORTFOLIO
+        </SectionTitle>
 
-      <SectionText>I am Mostafa, a MERN Developer.</SectionText>
+        <SectionText>I am Mostafa, a MERN Developer.</SectionText>
 
-      <Button>
-        <a style={{ color: "white" }} href="#footer">
-          Contact Me
-        </a>
-      </Button>
-    </LeftSection>
-  </Section>
-);
+        <Button>
+          <a style={{ color: "white" }} href="#footer">
+            Contact Me
+          </a>
+        </Button>
+      </LeftSection>
+    </Section>
+  );
+};
 
 export default Hero;
