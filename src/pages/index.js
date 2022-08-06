@@ -9,11 +9,14 @@ import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 
 const Home = () => {
-  //State for Animation
+  //State for hero Animation
   const [startAnimation] = useState(true);
 
-  //State for Animation
+  //State for other sections Animation
   const [animateProjects, setAnimateProjects] = useState(false);
+
+  //State for other sections Animation
+  const [animateTechs, setAnimateTechs] = useState(false);
 
   return (
     <Layout>
@@ -25,7 +28,10 @@ const Home = () => {
         animateProjects={animateProjects}
         setAnimateProjects={setAnimateProjects}
       />
-      <Technologies startAnimation={startAnimation} />
+      <Technologies
+        animateTechs={animateTechs}
+        setAnimateTechs={setAnimateTechs}
+      />
       <AboutMe startAnimation={startAnimation} />
       <Acomplishments startAnimation={startAnimation} />
     </Layout>
