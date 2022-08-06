@@ -17,6 +17,7 @@ const Home = () => {
 
   //State for other sections Animation
   const [animateTechs, setAnimateTechs] = useState(false);
+  const [animateAbout, setAnimateAbout] = useState(false);
 
   return (
     <Layout>
@@ -32,7 +33,7 @@ const Home = () => {
         animateTechs={animateTechs}
         setAnimateTechs={setAnimateTechs}
       />
-      <AboutMe startAnimation={startAnimation} />
+      <AboutMe animateAbout={animateAbout} setAnimateAbout={setAnimateAbout} />
       <Acomplishments startAnimation={startAnimation} />
     </Layout>
   );

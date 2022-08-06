@@ -1,3 +1,4 @@
+import { animated } from "react-spring";
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -58,7 +59,7 @@ export const SectionTitle = styled.h2`
   }
 `;
 
-export const SectionText = styled.p`
+export const SectionText = styled(animated.p)`
   max-width: 800px;
   font-size: 24px;
   line-height: 40px;
