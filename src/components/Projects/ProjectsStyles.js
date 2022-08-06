@@ -1,3 +1,4 @@
+import { animated, config, useTransition } from "react-spring";
 import styled from "styled-components";
 
 export const Img = styled.img`
@@ -22,7 +23,7 @@ export const GridContainer = styled.section`
     padding-bottom: 0;
   }
 `;
-export const BlogCard = styled.div`
+const StyledBlogCard = styled(animated.div)`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
@@ -31,6 +32,21 @@ export const BlogCard = styled.div`
     width: 100%;
   }
 `;
+
+export const BlogCard = ({ animateProjects, children }) => {
+  const transitions = useTransition(animateProjects, {
+    from: { opacity: 0, transform: "translatex(-35%)" },
+    enter: { opacity: 1, transform: "translatex(0%)" },
+    leave: { opacity: 0, transform: "translatex(-35%)" },
+    config: { ...config.slow, duration: 750 },
+  });
+
+  return transitions(
+    (styles, item) =>
+      item && <StyledBlogCard style={styles}> {children} </StyledBlogCard>
+  );
+};
+
 export const TitleContent = styled.div`
   margin-top: 1rem;
   text-align: center;

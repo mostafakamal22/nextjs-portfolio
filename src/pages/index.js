@@ -12,13 +12,19 @@ const Home = () => {
   //State for Animation
   const [startAnimation] = useState(true);
 
+  //State for Animation
+  const [animateProjects, setAnimateProjects] = useState(false);
+
   return (
     <Layout>
       <Section grid>
         <Hero startAnimation={startAnimation} />
         <BgAnimation startAnimation={startAnimation} />
       </Section>
-      <Projects startAnimation={startAnimation} />
+      <Projects
+        animateProjects={animateProjects}
+        setAnimateProjects={setAnimateProjects}
+      />
       <Technologies startAnimation={startAnimation} />
       <AboutMe startAnimation={startAnimation} />
       <Acomplishments startAnimation={startAnimation} />

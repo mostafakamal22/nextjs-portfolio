@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiFillCode, AiFillPlayCircle } from "react-icons/ai";
 import { RiStackFill } from "react-icons/ri";
 
@@ -24,60 +24,76 @@ import {
 import { projects } from "../../constants/constants";
 import Button from "../../styles/GlobalComponents/Button";
 
-const Projects = () => (
-  <Section id="projects">
-    <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
-    <GridContainer>
-      {projects.map((p, i) => {
-        return (
-          <BlogCard key={i}>
-            <Img src={p.image} loading="lazy" alt="Project" />
+const Projects = ({ animateProjects, setAnimateProjects }) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const intersecting = entry.isIntersecting;
+          if (intersecting) {
+            setAnimateProjects(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(document.getElementById("projects"));
+  }, []);
+
+  return (
+    <Section id="projects">
+      <SectionDivider />
+      <SectionTitle main>Projects</SectionTitle>
+      <GridContainer>
+        {projects.map((project, index) => (
+          <BlogCard animateProjects={animateProjects} key={index}>
+            <Img src={project.image} loading="lazy" alt="Project" />
             <TitleContent>
-              <HeaderThree title={1}>{p.title}</HeaderThree>
+              <HeaderThree title={1}>{project.title}</HeaderThree>
               <Hr />
             </TitleContent>
-            <CardInfo className="card-info">{p.description}</CardInfo>
+            <CardInfo className="card-info">{project.description}</CardInfo>
             <div>
               <StackTitle>
                 Stack
                 <RiStackFill size={25} />
               </StackTitle>
               <TagList>
-                {p.tags.map((t, i) => {
-                  return <Tag key={i}>{t}</Tag>;
+                {project.tags.map((tag, i) => {
+                  return <Tag key={i}>{tag}</Tag>;
                 })}
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={p.visit} target="_blank">
+              <ExternalLinks href={project.visit} target="_blank">
                 Demo
                 <AiFillPlayCircle size={20} />
               </ExternalLinks>
-              <ExternalLinks href={p.source} target="_blank">
+              <ExternalLinks href={project.source} target="_blank">
                 Source
                 <AiFillCode size={20} />
               </ExternalLinks>
             </UtilityList>
           </BlogCard>
-        );
-      })}
-    </GridContainer>
+        ))}
+      </GridContainer>
 
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button>
-        <a
-          style={{ color: "white" }}
-          href="https://mostafakamal22.github.io/#my-work"
-          target="_blank"
-        >
-          More Projects
-        </a>
-      </Button>
-    </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button>
+          <a
+            style={{ color: "white" }}
+            href="https://mostafakamal22.github.io/#my-work"
+            target="_blank"
+          >
+            More Projects
+          </a>
+        </Button>
+      </div>
 
-    <SectionDivider />
-  </Section>
-);
+      <SectionDivider />
+    </Section>
+  );
+};
 
 export default Projects;
