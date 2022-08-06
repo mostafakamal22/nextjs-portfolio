@@ -115,7 +115,7 @@ export const technologies = [
 ];
 
 //Acomplishments data
-export const acomplishments = [{ number: "+15", text: "Projects" }];
+export const acomplishments = [{ number: 15, text: "Projects" }];
 
 //Footer data
 export const contacts = [
