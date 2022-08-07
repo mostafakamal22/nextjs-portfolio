@@ -1,10 +1,24 @@
 import { animated } from "react-spring";
 import styled from "styled-components";
 
+type Props = {
+  grid?: boolean;
+  row?: boolean;
+  nopadding?: boolean;
+  main?: boolean;
+  colorAlt?: boolean;
+  divider?: boolean;
+  alt?: boolean;
+  form?: boolean;
+  large?: boolean;
+  nav?: boolean;
+  disabled?: boolean;
+};
+
 export const Section = styled.section`
-  display: ${(props) => (props.grid ? "grid" : "flex")};
-  flex-direction: ${(props) => (props.row ? "row" : "column")};
-  padding: ${(props) => (props.nopadding ? "0" : "32px 48px 0")};
+  display: ${(props: Props) => (props.grid ? "grid" : "flex")};
+  flex-direction: ${(props: Props) => (props.row ? "row" : "column")};
+  padding: ${(props: Props) => (props.nopadding ? "0" : "32px 48px 0")};
   margin: 0 auto;
   max-width: 1040px;
   box-sizing: content-box;
@@ -27,8 +41,8 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h2`
   font-weight: 800;
-  font-size: ${(props) => (props.main ? "65px" : "56px")};
-  line-height: ${(props) => (props.main ? "72px" : "56px")};
+  font-size: ${(props: Props) => (props.main ? "65px" : "56px")};
+  line-height: ${(props: Props) => (props.main ? "72px" : "56px")};
   width: max-content;
   max-width: 100%;
   background: linear-gradient(
@@ -36,6 +50,7 @@ export const SectionTitle = styled.h2`
     #ffffff 18.77%,
     rgba(255, 255, 255, 0.66) 60.15%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
@@ -86,12 +101,12 @@ export const SectionDivider = styled.div`
   height: 6px;
   border-radius: 10px;
   background-color: #fff;
-  background: ${(props) =>
+  background: ${(props: Props) =>
     props.colorAlt
       ? "linear-gradient(270deg, #F46737 0%, #945DD6 100%)"
       : "linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)"};
 
-  margin: ${(props) => (props.divider ? "4rem 0" : "")};
+  margin: ${(props: Props) => (props.divider ? "4rem 0" : "")};
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 48px;
@@ -173,15 +188,15 @@ export const SecondaryBtn = styled.button`
 `;
 
 export const ButtonBack = styled.div`
-  width: ${({ alt }) => (alt ? "150px" : "262px")};
-  height: ${({ alt }) => (alt ? "52px" : "64px")};
+  width: ${(props: Props) => (props.alt ? "150px" : "262px")};
+  height: ${(props: Props) => (props.alt ? "52px" : "64px")};
   border-radius: 50px;
-  font-size: ${({ alt }) => (alt ? "20px" : "24px")};
+  font-size: ${(props: Props) => (props.alt ? "20px" : "24px")};
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: ${({ alt, form }) => (alt || form ? "0" : "3rem 0 80px")};
+  margin: ${(props: Props) => (props.alt || props.form ? "0" : "3rem 0 80px")};
   color: #fff;
   background: ${({ alt }) =>
     alt
@@ -191,7 +206,7 @@ export const ButtonBack = styled.div`
   transition: 0.5s ease;
   position: relative;
   overflow: hidden;
-  opacity: ${({ disabled }) => (disabled ? ".5" : "1")};
+  opacity: ${(props: Props) => (props.disabled ? ".5" : "1")};
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: ${({ alt }) => (alt ? "150px" : "184px")};
@@ -255,7 +270,7 @@ export const ButtonFront = styled.button`
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${({ alt }) => (alt ? "20px" : "16px")};
+    font-size: ${(props: Props) => (props.alt ? "20px" : "16px")};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -264,7 +279,7 @@ export const ButtonFront = styled.button`
 `;
 
 export const LinkContainer = styled.div`
-  margin-left: ${({ large }) => (large ? "24px" : "16px")};
+  margin-left: ${(props: Props) => (props.large ? "24px" : "16px")};
   transition: 0.3s ease;
   justify-content: center;
   border-radius: 50px;
@@ -277,22 +292,22 @@ export const LinkContainer = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
-    margin-left: ${({ large }) => (large ? "16px" : "8px")};
+    margin-left: ${(props: Props) => (props.large ? "16px" : "8px")};
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-left: ${({ large }) => (large ? "0" : "8px")};
+    margin-left: ${(props: Props) => (props.large ? "0" : "8px")};
   }
 `;
 
 export const LinkIconImg = styled.div`
   display: flex;
-  height: ${({ large }) => (large ? "32px" : "24px")};
+  height: ${(props: Props) => (props.large ? "32px" : "24px")};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    height: ${({ nav }) => (nav ? "16px" : "24px")};
+    height: ${(props: Props) => (props.nav ? "16px" : "24px")};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    height: ${({ large }) => (large ? "32px" : "16px")};
+    height: ${(props: Props) => (props.large ? "32px" : "16px")};
   }
 `;
