@@ -119,7 +119,12 @@ const StyledListItem = styled(animated.li)`
   }
 `;
 
-export const ListItem = ({ animateTechs, children }) => {
+type ListTypes = {
+  animateTechs: boolean,
+  children: any
+}
+
+export const ListItem = ({ animateTechs, children }: ListTypes) => {
   const transitions = useTransition(animateTechs, {
     from: { opacity: 0 },
     enter: { opacity: 1 },

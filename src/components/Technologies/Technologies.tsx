@@ -14,7 +14,12 @@ import {
   ListTitle,
 } from "./TechnologiesStyles";
 
-const Technologies = ({ animateTechs, setAnimateTechs }) => {
+type TechProps = {
+  animateTechs: boolean;
+  setAnimateTechs(bool: boolean): any;
+};
+
+const Technologies = ({ animateTechs, setAnimateTechs }: TechProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,7 +33,8 @@ const Technologies = ({ animateTechs, setAnimateTechs }) => {
       },
       { threshold: 1 }
     );
-    observer.observe(document.getElementById("tech"));
+    const tech = document.getElementById("tech")!;
+    observer.observe(tech);
   }, []);
   return (
     <Section id="tech">
