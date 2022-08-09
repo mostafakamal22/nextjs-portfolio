@@ -65,7 +65,12 @@ const StyledBoxNum = styled(animated.h5)`
   }
 `;
 
-export const BoxNum = ({ animateAcomplishments, children }) => {
+interface BoxNumProps {
+  animateAcomplishments: boolean;
+  children: any;
+}
+
+export const BoxNum = ({ animateAcomplishments, children }: BoxNumProps) => {
   const transitions = useTransition(animateAcomplishments, {
     from: { opacity: 0, transform: "translateY(-50px)" },
     enter: { opacity: 1, transform: "translateY(0)" },

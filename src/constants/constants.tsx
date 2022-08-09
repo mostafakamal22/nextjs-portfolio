@@ -13,7 +13,15 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 
 //Projects Data
-export const projects = [
+export const projects: readonly {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  source: string;
+  visit: string;
+  id: number;
+}[] = [
   {
     title: "MERN E-Bank System",
     description:
@@ -56,10 +64,15 @@ export const projects = [
 ];
 
 //Technologies Data
-export const technologies = [
+export const technologies: readonly {
+  title: string;
+  paragraph: string;
+  icon: JSX.Element;
+  id: number;
+}[] = [
   {
     title: "Web Development Basics",
-    paragraph: "HTML, CSS and JS(ES6).",
+    paragraph: "HTML, CSS, JS(ES6) and TypeScript.",
     icon: <SiHtml5 size={40} />,
     id: 0,
   },
@@ -77,13 +90,14 @@ export const technologies = [
   },
   {
     title: "Front-End Frameworks",
-    paragraph: "ReactJS",
+    paragraph: "ReactJS And Basics Of NextJS.",
     icon: <DiReact size={40} />,
     id: 3,
   },
   {
     title: "Front-End State Management",
-    paragraph: "Redux, Redux-Toolkit And React-Context-Ruducer State System.",
+    paragraph:
+      "Redux, Redux-Toolkit And React-UseContext-UseRuducer State Management System.",
     icon: <DiReact size={40} />,
     id: 4,
   },
@@ -115,10 +129,18 @@ export const technologies = [
 ];
 
 //Acomplishments data
-export const acomplishments = [{ number: 15, text: "Github Projects" }];
+export const acomplishments: readonly {
+  number: number;
+  text: string;
+}[] = [{ number: 15, text: "Github Projects" }];
 
 //Footer data
-export const contacts = [
+export const contacts: readonly {
+  title: string;
+  text: string;
+  link: string;
+  icon: JSX.Element;
+}[] = [
   {
     title: "Call",
     text: "+201008871950",

@@ -24,7 +24,12 @@ import {
 import { projects } from "../../constants/constants";
 import Button from "../../styles/GlobalComponents/Button";
 
-const Projects = ({ animateProjects, setAnimateProjects }) => {
+interface ProjectsProps {
+  animateProjects: boolean;
+  setAnimateProjects(bool: boolean): void;
+}
+
+const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -38,7 +43,8 @@ const Projects = ({ animateProjects, setAnimateProjects }) => {
       },
       { threshold: 0.5 }
     );
-    observer.observe(document.getElementById("projects"));
+    const projects = document.getElementById("projects")!;
+    observer.observe(projects);
   }, []);
 
   return (

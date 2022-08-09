@@ -7,7 +7,12 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 
-const AboutMe = ({ animateAbout, setAnimateAbout }) => {
+interface AboutMeProps {
+  animateAbout: boolean;
+  setAnimateAbout(bol: boolean): void;
+}
+
+const AboutMe = ({ animateAbout, setAnimateAbout }: AboutMeProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,7 +26,7 @@ const AboutMe = ({ animateAbout, setAnimateAbout }) => {
       },
       { threshold: 1 }
     );
-    observer.observe(document.getElementById("about"));
+    observer.observe(document.getElementById("about") as HTMLElement);
   }, []);
 
   const transitions = useTransition(animateAbout, {

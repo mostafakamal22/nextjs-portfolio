@@ -54,22 +54,22 @@ export const SectionTitle = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${(props) => (props.main ? "58px 0 16px" : "0")};
+  padding: ${(props: Props) => (props.main ? "58px 0 16px" : "0")};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${(props) => (props.main ? "56px" : "48px")};
-    line-height: ${(props) => (props.main ? "56px" : "48px")};
+    font-size: ${(props: Props) => (props.main ? "56px" : "48px")};
+    line-height: ${(props: Props) => (props.main ? "56px" : "48px")};
     margin-bottom: 12px;
-    padding: ${(props) => (props.main ? "40px 0 12px" : "0")};
+    padding: ${(props: Props) => (props.main ? "40px 0 12px" : "0")};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 32px;
     line-height: 40px;
-    font-size: ${(props) => (props.main ? "28px" : "32px")};
-    line-height: ${(props) => (props.main ? "32px" : "40px")};
+    font-size: ${(props: Props) => (props.main ? "28px" : "32px")};
+    line-height: ${(props: Props) => (props.main ? "32px" : "40px")};
     margin-bottom: 8px;
-    padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
+    padding: ${(props: Props) => (props.main ? "16px 0 8px" : "0")};
     max-width: 100%;
   }
 `;
@@ -238,14 +238,14 @@ export const ButtonFront = styled.button`
     alt
       ? "linear-gradient(270deg, #F46737 0%, #945DD6 100%)"
       : "linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)"};
-  opacity: ${({ disabled }) => (disabled ? ".5" : "1")};
+  opacity: ${({ disabled }: Props) => (disabled ? ".5" : "1")};
   transition: 0.4s ease;
   font-size: ${({ alt }) => (alt ? "20px" : "24px")};
   font-weight: 600;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: ${({ disabled }) =>
+  box-shadow: ${({ disabled }: Props) =>
     disabled
       ? "inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3)"
       : "none"};

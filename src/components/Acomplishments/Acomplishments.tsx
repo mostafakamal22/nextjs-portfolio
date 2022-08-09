@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { config, useTransition } from "react-spring";
 import { acomplishments } from "../../constants/constants";
 
 import {
@@ -9,10 +8,15 @@ import {
 } from "../../styles/GlobalComponents";
 import { Box, Boxes, BoxNum, BoxText } from "./AcomplishmentsStyles";
 
+interface AcomplishmentsProps {
+  animateAcomplishments: boolean;
+  setAnimateAcomplishments(bol: boolean): void;
+}
+
 const Acomplishments = ({
   animateAcomplishments,
   setAnimateAcomplishments,
-}) => {
+}: AcomplishmentsProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,7 +30,7 @@ const Acomplishments = ({
       },
       { threshold: 1 }
     );
-    observer.observe(document.getElementById("Acomplishments"));
+    observer.observe(document.getElementById("Acomplishments") as HTMLElement);
   }, []);
 
   return (

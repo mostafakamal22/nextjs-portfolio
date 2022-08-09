@@ -1,7 +1,11 @@
 import React from "react";
 import { animated, easings, useTransition } from "react-spring";
 
-const BackgroundAnimation = ({ startAnimation }) => {
+interface BgAnimationProps {
+  startAnimation: boolean;
+}
+
+const BackgroundAnimation = ({ startAnimation }: BgAnimationProps) => {
   const transitions = useTransition(startAnimation, {
     from: { opacity: 0 },
     enter: { opacity: 1 },

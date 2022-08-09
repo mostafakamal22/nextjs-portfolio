@@ -1,5 +1,10 @@
-import { animated, config, useTransition } from "react-spring";
-import styled from "styled-components";
+import {
+  animated,
+  AnimatedComponent,
+  config,
+  useTransition,
+} from "react-spring";
+import styled, { StyledComponent } from "styled-components";
 
 export const Img = styled.img`
   display: block;
@@ -23,7 +28,12 @@ export const GridContainer = styled.section`
     padding-bottom: 0;
   }
 `;
-const StyledBlogCard = styled(animated.div)`
+const StyledBlogCard: StyledComponent<
+  AnimatedComponent<"div">,
+  any,
+  {},
+  never
+> = styled(animated.div)`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
@@ -33,11 +43,16 @@ const StyledBlogCard = styled(animated.div)`
   }
 `;
 
-export const BlogCard = ({ animateProjects, children }) => {
+type BlogCardTypes = {
+  animateProjects: boolean;
+  children: any;
+};
+
+export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {
   const transitions = useTransition(animateProjects, {
-    from: { opacity: 0, transform: "translatex(-35%)" },
-    enter: { opacity: 1, transform: "translatex(0%)" },
-    leave: { opacity: 0, transform: "translatex(-35%)" },
+    from: { opacity: 0, transform: "translateY(-35%)" },
+    enter: { opacity: 1, transform: "translateY(0%)" },
+    leave: { opacity: 0, transform: "translateY(-35%)" },
     config: { ...config.slow, duration: 750 },
   });
 
@@ -67,7 +82,11 @@ export const StackTitle = styled(TitleContent)`
   width: 100%;
 `;
 
-export const HeaderThree = styled.h3`
+interface HeaderThreeProps {
+  title?: boolean;
+}
+
+export const HeaderThree = styled.h3<HeaderThreeProps>`
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;

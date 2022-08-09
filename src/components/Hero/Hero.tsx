@@ -7,11 +7,15 @@ import {
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 
-const Hero = ({ startAnimation }) => {
+interface HeroProps {
+  startAnimation: boolean;
+}
+
+const Hero = ({ startAnimation }: HeroProps) => {
   return (
     <Section row nopadding>
       <LeftSection startAnimation={startAnimation}>
-        <SectionTitle main center>
+        <SectionTitle main>
           Welcome To <br />
           My PORTFOLIO
         </SectionTitle>

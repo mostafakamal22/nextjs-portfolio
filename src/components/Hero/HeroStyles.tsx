@@ -17,7 +17,12 @@ const StyledLeftSection = styled(animated.div)`
   }
 `;
 
-export const LeftSection = ({ startAnimation, children }) => {
+interface LeftSectionProps {
+  startAnimation: boolean;
+  children: any;
+}
+
+export const LeftSection = ({ startAnimation, children }: LeftSectionProps) => {
   const transitions = useTransition(startAnimation, {
     from: { opacity: 0, transform: "translateY(-100%)" },
     enter: { opacity: 1, transform: "translateY(0%)" },
