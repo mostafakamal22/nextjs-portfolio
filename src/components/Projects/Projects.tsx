@@ -56,7 +56,7 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
           <BlogCard animateProjects={animateProjects} key={index}>
             <Img src={project.image} loading="lazy" alt="Project" />
             <TitleContent>
-              <HeaderThree title={1}>{project.title}</HeaderThree>
+              <HeaderThree header>{project.title}</HeaderThree>
               <Hr />
             </TitleContent>
             <CardInfo className="card-info">{project.description}</CardInfo>

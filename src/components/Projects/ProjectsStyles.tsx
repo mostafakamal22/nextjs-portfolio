@@ -1,10 +1,5 @@
-import {
-  animated,
-  AnimatedComponent,
-  config,
-  useTransition,
-} from "react-spring";
-import styled, { StyledComponent } from "styled-components";
+import { animated, config, useTransition } from "react-spring";
+import styled from "styled-components";
 
 export const Img = styled.img`
   display: block;
@@ -28,12 +23,7 @@ export const GridContainer = styled.section`
     padding-bottom: 0;
   }
 `;
-const StyledBlogCard: StyledComponent<
-  AnimatedComponent<"div">,
-  any,
-  {},
-  never
-> = styled(animated.div)`
+const StyledBlogCard = styled(animated.div)`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
@@ -82,16 +72,16 @@ export const StackTitle = styled(TitleContent)`
   width: 100%;
 `;
 
-interface HeaderThreeProps {
-  title?: boolean;
-}
+type HeaderThreeProps = {
+  header?: boolean;
+};
 
 export const HeaderThree = styled.h3<HeaderThreeProps>`
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: 0.5rem 0;
-  font-size: ${(props) => (props.title ? "3rem" : "2rem")};
+  font-size: ${(props) => (props.header ? "3rem" : "2rem")};
 `;
 
 export const Hr = styled.hr`
