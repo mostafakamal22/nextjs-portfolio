@@ -5,6 +5,7 @@ import {
   DiGitBranch,
   DiMongodb,
   DiReact,
+  DiTerminal,
 } from "react-icons/di";
 import { SiAuthy, SiHtml5 } from "react-icons/si";
 
@@ -165,10 +166,16 @@ export const technologies: readonly {
     id: 7,
   },
   {
+    title: "Unit Testing",
+    paragraph: "Jest And React Testing Library",
+    icon: <DiTerminal size={40} />,
+    id: 8,
+  },
+  {
     title: "Version Control",
     paragraph: "Git And Github.",
     icon: <DiGitBranch size={40} />,
-    id: 8,
+    id: 9,
   },
 ];
 
