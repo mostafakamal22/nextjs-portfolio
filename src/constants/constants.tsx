@@ -183,7 +183,11 @@ export const technologies: readonly {
 export const acomplishments: readonly {
   number: number;
   text: string;
-}[] = [{ number: 15, text: "Github Projects" }];
+}[] = [
+  { number: 20, text: "Github Projects" },
+  { number: 1, text: "Github Padge" },
+  { number: 3, text: "LinkedIn Skill Padges" },
+];
 
 //Footer data
 export const contacts: readonly {
