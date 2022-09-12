@@ -64,6 +64,47 @@ export const projects: Project[] = [
     visit: "#0",
     id: 1,
   },
+  {
+    title: "Twitter Tweet System",
+    description:
+      "A Front-End Application - It Provides a simple tweets system (add new tweet, like tweet and reply to tweet) by using Three State Management Systems [Redux, useReducer along with useContext and ReduxToolkit]. also uses lazy loading on profile images to enhance application performance.",
+    image: "/images/twitter.png",
+    tags: [
+      "Reactjs",
+      "React-Router-Dom",
+      "React-Context",
+      "React-Hooks",
+      "Redux-Toolkit",
+      "Redux",
+      "Lazy-Loading",
+    ],
+    source:
+      "https://github.com/mostafakamal22/React-Twitter-Tweet-System/tree/reduxToolkit-query",
+    visit: "https://mostafakamal22.github.io/twitter-tweet-system/",
+    id: 2,
+  },
+  {
+    title: "Product Page",
+    description:
+      "A Front-End Application - where users should be able to View the optimal layout for the site depending on their device's screen size, See hover states for all interactive elements on the page, Open a lightbox gallery by clicking on the large product image, Switch the large product image by clicking on the small thumbnail images and Add items to the cart View the cart and remove items from it",
+    image: "/images/product-page.png",
+    tags: [
+      "Reactjs",
+      "TypeScript",
+      "Sass",
+      "React-Hooks",
+      "LocalStorage",
+      "Lazy-Loading",
+      "Framer-Motion",
+      "Swiper",
+      "Jest",
+      "React-Testing-Library",
+    ],
+    source:
+      "https://github.com/mostafakamal22/React-TS-Sass-Ecommerce-Product-Page",
+    visit: "https://mostafakamal22.github.io/ecommerce-product-page/",
+    id: 3,
+  },
 ];
 
 //Technologies Data
