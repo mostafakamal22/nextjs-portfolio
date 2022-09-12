@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { AiFillCode, AiFillPlayCircle } from "react-icons/ai";
 import { RiStackFill } from "react-icons/ri";
-
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import {
   BlogCard,
   CardInfo,
@@ -54,7 +54,9 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
       <GridContainer>
         {projects.map((project, index) => (
           <BlogCard animateProjects={animateProjects} key={index}>
-            <Img src={project.image} loading="lazy" alt="Project" />
+            <LazyLoadComponent>
+              <Img src={project.image} loading="lazy" alt="Project" />
+            </LazyLoadComponent>
             <TitleContent>
               <HeaderThree header>{project.title}</HeaderThree>
               <Hr />

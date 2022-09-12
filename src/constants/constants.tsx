@@ -13,7 +13,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 
 //Projects Data
-export const projects: readonly {
+export interface Project {
   title: string;
   description: string;
   image: string;
@@ -21,7 +21,10 @@ export const projects: readonly {
   source: string;
   visit: string;
   id: number;
-}[] = [
+}
+[];
+
+export const projects: Project[] = [
   {
     title: "MERN E-Bank System",
     description:
