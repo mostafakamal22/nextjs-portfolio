@@ -20,7 +20,9 @@ const Hero = ({ startAnimation }: HeroProps) => {
           My PORTFOLIO
         </SectionTitle>
 
-        <SectionText>I am Mostafa, a MERN Developer.</SectionText>
+        <SectionText>
+          I am Mostafa, a MERN Stack Developer & Front-End Web Developer.
+        </SectionText>
 
         <Button>
           <a style={{ color: "white" }} href="#footer">
