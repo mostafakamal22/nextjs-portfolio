@@ -40,7 +40,7 @@ const Acomplishments = ({
         {acomplishments.map(({ number, text }, index) => (
           <Box key={index}>
             <BoxNum animateAcomplishments={animateAcomplishments}>
-              {`+${number}`}{" "}
+              {number}
             </BoxNum>
             <BoxText>{text}</BoxText>
           </Box>

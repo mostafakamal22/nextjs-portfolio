@@ -230,9 +230,9 @@ export const acomplishments: readonly {
   number: number;
   text: string;
 }[] = [
-  { number: 20, text: "Github Projects" },
+  { number: 24, text: "Github Projects" },
   { number: 1, text: "Github Padge" },
-  { number: 3, text: "LinkedIn Skill Padges" },
+  { number: 5, text: "LinkedIn Skill Padges" },
 ];
 
 //Footer data
