@@ -12,6 +12,7 @@ import { SiAuthy, SiHtml5 } from "react-icons/si";
 import { IoCall } from "react-icons/io5";
 import { RiWhatsappFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
+import { nanoid } from "nanoid";
 
 //Projects Data
 export interface Project {
@@ -20,12 +21,57 @@ export interface Project {
   image: string;
   tags: string[];
   source: string;
-  visit: string;
-  id: number;
+  visit: string | null;
+  id: string;
 }
 [];
 
 export const projects: Project[] = [
+  {
+    title: "MERN TBT System & Dashboard",
+    description:
+      "A Full Stack MERN Application - From Designing to Deploying. it is a Data Visualization app Containing the Admin Dashborad and Resources' Charts Depending on The Data Entered By Admins",
+    image: "/images/tbt-dashboard.webp",
+    tags: [
+      "Reactjs",
+      "Typescript",
+      "Nodejs",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Access & Refresh Tokens",
+      "Cookies",
+      "React-Router-Dom",
+      "React-Hooks",
+      "Redux-Toolkit-Query",
+      "TailwindCSS",
+      "ChartJs",
+      "React-Chartjs",
+    ],
+    source: "https://github.com/mostafakamal22/trans-borders-tourism",
+    visit: null,
+    id: nanoid(),
+  },
+  {
+    title: "TBT Website",
+    description:
+      "A (HTML - Tailwind - JS) Landing Page From Designing to Deploying. it is the Trans border Tourism's official website.",
+    image: "/images/tbt-website.webp",
+    tags: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "TailwindCSS",
+      "SEO",
+      "Performance Optimization",
+      "Responsive Design",
+      "Lazy Loading",
+    ],
+    source: "https://github.com/mostafakamal22/trans-border-tourism-website",
+    visit: "https://tbtourism.com/",
+    id: nanoid(),
+  },
   {
     title: "MERN E-Bank System",
     description:
@@ -46,8 +92,8 @@ export const projects: Project[] = [
       "TailwindCSS",
     ],
     source: "https://github.com/mostafakamal22/Sprints-MERN-E-Banking-System",
-    visit: "https://e-bank-mern-app.herokuapp.com",
-    id: 0,
+    visit: "https://ebank-2t3r.onrender.com",
+    id: nanoid(),
   },
   {
     title: "E-Commerce",
@@ -62,8 +108,8 @@ export const projects: Project[] = [
       "TailwindCSS",
     ],
     source: "https://github.com/mostafakamal22/sprints-e-commerce-project",
-    visit: "#0",
-    id: 1,
+    visit: null,
+    id: nanoid(),
   },
   {
     title: "Twitter Tweet System",
@@ -82,7 +128,7 @@ export const projects: Project[] = [
     source:
       "https://github.com/mostafakamal22/React-Twitter-Tweet-System/tree/reduxToolkit-query",
     visit: "https://mostafakamal22.github.io/twitter-tweet-system/",
-    id: 2,
+    id: nanoid(),
   },
   {
     title: "Product Page",
@@ -104,7 +150,7 @@ export const projects: Project[] = [
     source:
       "https://github.com/mostafakamal22/React-TS-Sass-Ecommerce-Product-Page",
     visit: "https://mostafakamal22.github.io/ecommerce-product-page/",
-    id: 3,
+    id: nanoid(),
   },
 ];
 

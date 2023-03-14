@@ -3,17 +3,21 @@ import styled from "styled-components";
 
 export const Img = styled.img`
   display: block;
+  padding: 5px;
+  border-radius: 1rem;
   width: 100%;
-  height: 100%;
+  height: 200px;
+  max-height: 100%;
   object-fit: cover;
+  object-position: center;
   overflow: hidden;
 `;
 
 export const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 3rem;
-  place-items: center;
+  justify-items: center;
   column-gap: 2rem;
   row-gap: 3rem;
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -24,7 +28,10 @@ export const GridContainer = styled.section`
   }
 `;
 const StyledBlogCard = styled(animated.div)`
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid green;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
@@ -35,7 +42,7 @@ const StyledBlogCard = styled(animated.div)`
 
 type BlogCardTypes = {
   animateProjects: boolean;
-  children: any;
+  children: React.ReactNode;
 };
 
 export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {

@@ -62,7 +62,7 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
               <Hr />
             </TitleContent>
             <CardInfo className="card-info">{project.description}</CardInfo>
-            <div>
+            <div style={{ marginTop: "auto" }}>
               <StackTitle>
                 Stack
                 <RiStackFill size={25} />
@@ -74,10 +74,13 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={project.visit} target="_blank">
-                Demo
-                <AiFillPlayCircle size={20} />
-              </ExternalLinks>
+              {project?.visit && (
+                <ExternalLinks href={project.visit} target="_blank">
+                  Demo
+                  <AiFillPlayCircle size={20} />
+                </ExternalLinks>
+              )}
+
               <ExternalLinks href={project.source} target="_blank">
                 Source
                 <AiFillCode size={20} />

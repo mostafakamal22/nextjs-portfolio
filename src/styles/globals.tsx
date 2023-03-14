@@ -12,7 +12,8 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-
+    scroll-padding: 2rem;
+    overflow-x: hidden;
   }
   body {
     font-family: ${(props) => props.theme.fonts.main};
