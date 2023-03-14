@@ -42,7 +42,7 @@ const Footer = () => {
               size={20}
             />
           </Slogan>
-          <Slogan>MK WebDev ©2022</Slogan>
+          <Slogan>MK WebDev ©{new Date().getFullYear()}</Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href="https://github.com/mostafakamal22" target="_blank">

@@ -4,11 +4,11 @@ export const FooterWrapper = styled.section`
   width: calc(100vw - 96px);
   max-width: 1040px;
   padding: 2rem 48px 40px;
-  margin: 1rem auto;
+  margin: 1rem auto 0;
   box-sizing: content-box;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0 16px 48px;
+    padding: 0 16px 16px;
     width: calc(100vw - 32px);
   }
 `;
@@ -73,7 +73,7 @@ export const CompanyContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
-    margin: 0 0 32px;
+    margin: 0 0 10px;
     align-items: center;
   }
 `;
