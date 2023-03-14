@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title: "MERN E-Bank System",
     description:
       "A Full Stack MERN Application - from start to finish. it is an E-Bank system which users can create their secured online bank accounts so that they can (Deposit, Withdraw and Transfer) money anytime, also the system provide an efficient admins dashboard so that admins can handle users' account requests and users' bank account status easily.",
-    image: "/images/e-bank.png",
+    image: "/images/e-bank.webp",
     tags: [
       "Reactjs",
       "Nodejs",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title: "E-Commerce",
     description:
       "A Full Stack MERN Application - from start to finish. Clients could Navigate products, add products to cart, add products to wishlist, secure pay for products and more. Also the system provide a modern dashboard for admins so that they could do CRUD oprations on products, control carousel's images and users' account status.",
-    image: "/images/e-commerce.png",
+    image: "/images/e-commerce.webp",
     tags: [
       "Reactjs",
       "React-Router-Dom",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     title: "Twitter Tweet System",
     description:
       "A Front-End Application - It Provides a simple tweets system (add new tweet, like tweet and reply to tweet) by using Three State Management Systems [Redux, useReducer along with useContext and ReduxToolkit]. also uses lazy loading on profile images to enhance application performance.",
-    image: "/images/twitter.png",
+    image: "/images/twitter.webp",
     tags: [
       "Reactjs",
       "React-Router-Dom",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     title: "Product Page",
     description:
       "A Front-End Application - where users should be able to View the optimal layout for the site depending on their device's screen size, See hover states for all interactive elements on the page, Open a lightbox gallery by clicking on the large product image, Switch the large product image by clicking on the small thumbnail images and Add items to the cart View the cart and remove items from it",
-    image: "/images/product-page.png",
+    image: "/images/product-page.webp",
     tags: [
       "Reactjs",
       "TypeScript",
