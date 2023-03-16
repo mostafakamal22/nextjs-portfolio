@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const Img = styled.img`
   display: block;
   padding: 5px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
-  height: 200px;
+  height: 250px;
   max-height: 100%;
   object-fit: cover;
   object-position: center;
@@ -28,13 +28,43 @@ export const GridContainer = styled.section`
   }
 `;
 const StyledBlogCard = styled(animated.div)`
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  border: 1px solid green;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
+  background-color: #0f1624;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: linear-gradient(
+      var(--gradient-angle),
+      #5ddcff,
+      #3c67e3,
+      #4e00c2
+    );
+    border-radius: inherit;
+    animation: rotation 10s linear infinite;
+  }
+
+  &:after {
+    filter: blur(1.5rem);
+  }
+
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }

@@ -4,6 +4,20 @@ import { normalize } from "styled-normalize";
 const GlobalStyles = createGlobalStyle`
   ${normalize};
 
+  @supports (background: paint(something)) {
+    @property --gradient-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+  }
+
+  @supports not (background: paint(something)) {
+    :root {
+      --gradient-angle: 0deg;
+    }
+  }
+  
   * {
     box-sizing: border-box;
     margin: 0;
