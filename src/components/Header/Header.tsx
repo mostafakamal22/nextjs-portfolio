@@ -27,27 +27,32 @@ const Header = () => (
     <Div2>
       <li>
         <Link href={"#projects"}>
-          <NavLink>Projects</NavLink>
+          <NavLink title="Projects">Projects</NavLink>
         </Link>
       </li>
       <li>
         <Link href={"#tech"}>
-          <NavLink>Technologies</NavLink>
+          <NavLink title="Technologies">Technologies</NavLink>
         </Link>
       </li>
       <li>
         <Link href={"#about"}>
-          <NavLink>About</NavLink>
+          <NavLink title="About">About</NavLink>
         </Link>
       </li>
     </Div2>
 
     <Div3>
-      <SocialIcons href="https://github.com/mostafakamal22" target="_blank">
+      <SocialIcons
+        title="Github Page"
+        href="https://github.com/mostafakamal22"
+        target="_blank"
+      >
         <AiFillGithub size={30} />
       </SocialIcons>
 
       <SocialIcons
+        title="LinkedIn Page"
         href="https://linkedin.com/in/mostafakamal22/"
         target="_blank"
       >

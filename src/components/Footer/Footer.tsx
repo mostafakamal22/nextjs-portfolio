@@ -27,7 +27,7 @@ const Footer = () => {
               {title}
               {icon}
             </LinkTitle>
-            <LinkItem href={link} target="_blank">
+            <LinkItem title={title} href={link} target="_blank">
               {text}
             </LinkItem>
           </LinkColumn>
@@ -45,11 +45,16 @@ const Footer = () => {
           <Slogan>MK WebDev ©{new Date().getFullYear()}</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/mostafakamal22" target="_blank">
+          <SocialIcons
+            title="Github Page"
+            href="https://github.com/mostafakamal22"
+            target="_blank"
+          >
             <AiFillGithub size={40} />
           </SocialIcons>
 
           <SocialIcons
+            title="LinkedIn Page"
             href="https://linkedin.com/in/mostafakamal22/"
             target="_blank"
           >
