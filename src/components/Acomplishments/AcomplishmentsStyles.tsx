@@ -17,17 +17,37 @@ export const Boxes = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 15px;
     max-width: 500px;
     margin: 24px auto;
   }
 `;
 
 export const Box = styled.div`
+  position: relative;
   background: #212d45;
   border-radius: 12px;
   height: 144px;
   padding: 24px;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    inset: -0.25rem;
+    z-index: -1;
+    background: linear-gradient(
+      var(--gradient-angle),
+      #5ddcff,
+      #3c67e3,
+      #4e00c2
+    );
+    border-radius: inherit;
+    animation: rotation 10s linear infinite;
+  }
+
+  &:after {
+    filter: blur(0.8rem);
+  }
   @media ${(props) => props.theme.breakpoints.lg} {
     height: 210px;
   }
