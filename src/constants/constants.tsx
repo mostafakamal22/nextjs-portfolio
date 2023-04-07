@@ -21,6 +21,7 @@ export interface Project {
   title: string;
   description: string;
   image: string;
+  images: string[];
   tags: string[];
   source: string;
   visit: string | null;
@@ -34,6 +35,11 @@ export const projects: Project[] = [
     description:
       "A Full Stack MERN Application - From Designing to Deploying. it is a Data Visualization app Containing the Admin Dashborad and Resources' Charts Depending on The Data Entered By Admins",
     image: "/images/tbt-dashboard.webp",
+    images: [
+      "/images/tbt-dashboard.webp",
+      "/images/tbt-dashboard.webp",
+      "/images/tbt-dashboard.webp",
+    ],
     tags: [
       "Reactjs",
       "Typescript",
@@ -60,6 +66,12 @@ export const projects: Project[] = [
     description:
       "A (HTML - Tailwind - JS) Landing Page From Designing to Deploying. it is the Trans border Tourism's official website.",
     image: "/images/tbt-website.webp",
+    images: [
+      "/images/tbt-website.webp",
+      "/images/tbt-website.webp",
+      "/images/tbt-website.webp",
+      "/images/tbt-website.webp",
+    ],
     tags: [
       "HTML",
       "CSS",
@@ -79,6 +91,12 @@ export const projects: Project[] = [
     description:
       "A Full Stack MERN Application - from start to finish. it is an E-Bank system which users can create their secured online bank accounts so that they can (Deposit, Withdraw and Transfer) money anytime, also the system provide an efficient admins dashboard so that admins can handle users' account requests and users' bank account status easily.",
     image: "/images/e-bank.webp",
+    images: [
+      "/images/e-bank.webp",
+      "/images/e-bank.webp",
+      "/images/e-bank.webp",
+      "/images/e-bank.webp",
+    ],
     tags: [
       "Reactjs",
       "Nodejs",
@@ -102,6 +120,12 @@ export const projects: Project[] = [
     description:
       "A Full Stack MERN Application - from start to finish. Clients could Navigate products, add products to cart, add products to wishlist, secure pay for products and more. Also the system provide a modern dashboard for admins so that they could do CRUD oprations on products, control carousel's images and users' account status.",
     image: "/images/e-commerce.webp",
+    images: [
+      "/images/e-commerce.webp",
+      "/images/e-commerce.webp",
+      "/images/e-commerce.webp",
+      "/images/e-commerce.webp",
+    ],
     tags: [
       "Reactjs",
       "React-Router-Dom",
@@ -118,6 +142,12 @@ export const projects: Project[] = [
     description:
       "A Front-End Application - It Provides a simple tweets system (add new tweet, like tweet and reply to tweet) by using Three State Management Systems [Redux, useReducer along with useContext and ReduxToolkit]. also uses lazy loading on profile images to enhance application performance.",
     image: "/images/twitter.webp",
+    images: [
+      "/images/twitter.webp",
+      "/images/twitter.webp",
+      "/images/twitter.webp",
+      "/images/twitter.webp",
+    ],
     tags: [
       "Reactjs",
       "React-Router-Dom",
@@ -137,6 +167,12 @@ export const projects: Project[] = [
     description:
       "A Front-End Application - where users should be able to View the optimal layout for the site depending on their device's screen size, See hover states for all interactive elements on the page, Open a lightbox gallery by clicking on the large product image, Switch the large product image by clicking on the small thumbnail images and Add items to the cart View the cart and remove items from it",
     image: "/images/product-page.webp",
+    images: [
+      "/images/product-page.webp",
+      "/images/product-page.webp",
+      "/images/product-page.webp",
+      "/images/product-page.webp",
+    ],
     tags: [
       "Reactjs",
       "TypeScript",

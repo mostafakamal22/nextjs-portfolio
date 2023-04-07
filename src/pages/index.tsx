@@ -26,6 +26,7 @@ const Home = () => {
         <Hero startAnimation={startAnimation} />
         <BgAnimation startAnimation={startAnimation} />
       </Section>
+
       <Projects
         animateProjects={animateProjects}
         setAnimateProjects={setAnimateProjects}
