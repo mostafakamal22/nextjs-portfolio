@@ -22,7 +22,7 @@ const Home = () => {
   const [animateAcomplishments, setAnimateAcomplishments] = useState(false);
 
   return (
-    <Layout>
+    <Layout children={undefined}>
       <Section grid>
         <Hero startAnimation={startAnimation} />
         <BgAnimation startAnimation={startAnimation} />
