@@ -7,7 +7,6 @@ import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents/index";
-// import { ProjectCarousel } from "../components/Projects/ProjectCarousel";
 
 const Home = () => {
   //State for hero Animation
@@ -22,13 +21,11 @@ const Home = () => {
   const [animateAcomplishments, setAnimateAcomplishments] = useState(false);
 
   return (
-    <Layout children={undefined}>
+    <Layout>
       <Section grid>
         <Hero startAnimation={startAnimation} />
         <BgAnimation startAnimation={startAnimation} />
       </Section>
-
-      {/* <ProjectCarousel /> */}
 
       <Projects
         animateProjects={animateProjects}

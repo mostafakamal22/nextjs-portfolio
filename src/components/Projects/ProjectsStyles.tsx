@@ -28,46 +28,7 @@ export const GridContainer = styled.section`
   }
 `;
 const StyledBlogCard = styled(animated.div)`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  text-align: center;
-  width: 400px;
-  background-color: #0f1624;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    inset: -0.5rem;
-    z-index: -1;
-    background: linear-gradient(
-      var(--gradient-angle),
-      #5ddcff,
-      #3c67e3,
-      #4e00c2
-    );
-    border-radius: inherit;
-    animation: rotation 10s linear infinite;
-  }
-
-  &:after {
-    filter: blur(1.5rem);
-  }
-
-  @keyframes rotation {
-    0% {
-      --gradient-angle: 0deg;
-    }
-    100% {
-      --gradient-angle: 360deg;
-    }
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-  }
+  width: 100%;
 `;
 
 type BlogCardTypes = {
@@ -84,7 +45,7 @@ export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {
   });
 
   return transitions(
-    (styles, item) =>
+    (styles: any, item: any) =>
       item && <StyledBlogCard style={styles}> {children} </StyledBlogCard>
   );
 };

@@ -1,28 +1,13 @@
-import React, { useEffect } from "react";
-import { AiFillCode, AiFillPlayCircle } from "react-icons/ai";
-import { RiStackFill } from "react-icons/ri";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
-import {
-  BlogCard,
-  CardInfo,
-  ExternalLinks,
-  GridContainer,
-  HeaderThree,
-  Hr,
-  Tag,
-  TagList,
-  TitleContent,
-  UtilityList,
-  Img,
-  StackTitle,
-} from "./ProjectsStyles";
+import { useEffect } from "react";
+
+import { BlogCard } from "./ProjectsStyles";
 import {
   Section,
   SectionDivider,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import { projects } from "../../constants/constants";
 import Button from "../../styles/GlobalComponents/Button";
+import { ProjectCarousel } from "./ProjectCarousel";
 
 interface ProjectsProps {
   animateProjects: boolean;
@@ -51,8 +36,32 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
     <Section id="projects">
       <SectionDivider />
       <SectionTitle main>Projects</SectionTitle>
-      <GridContainer>
-        {projects.map((project, index) => (
+
+      <BlogCard animateProjects={animateProjects}>
+        <ProjectCarousel />
+      </BlogCard>
+
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button>
+          <a
+            style={{ color: "white" }}
+            href="https://mostafakamal22.github.io/#my-work"
+            target="_blank"
+          >
+            More Projects
+          </a>
+        </Button>
+      </div>
+
+      <SectionDivider />
+    </Section>
+  );
+};
+
+export default Projects;
+
+{
+  /* {projects.map((project, index) => (
           <BlogCard animateProjects={animateProjects} key={index}>
             <LazyLoadComponent>
               <Img src={project.image} loading="lazy" alt="Project" />
@@ -87,24 +96,5 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
               </ExternalLinks>
             </UtilityList>
           </BlogCard>
-        ))}
-      </GridContainer>
-
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button>
-          <a
-            style={{ color: "white" }}
-            href="https://mostafakamal22.github.io/#my-work"
-            target="_blank"
-          >
-            More Projects
-          </a>
-        </Button>
-      </div>
-
-      <SectionDivider />
-    </Section>
-  );
-};
-
-export default Projects;
+        ))} */
+}

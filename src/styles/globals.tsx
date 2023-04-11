@@ -23,12 +23,14 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding: 2rem;
     overflow-x: hidden;
   }
+
   body {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
@@ -37,39 +39,42 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
 
   }
+
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${(props) => props.theme.fonts.title};
   }
+
   a {
     text-decoration: none;
   }
+
   li{
     list-style: none;
   }
 
   //Swiper Styles
-  --large-desktop: 992px;
-  --extra-large-desktops: 1200px;
-
   .mySwiper {
+  position: relative;
   width: 100%;
-  /* max-width: 35rem; */
   height: 60rem;
-  margin: 0;
-  /* @media screen and (min-width: var(--large-desktop)) {
-    flex-basis: 45%;
-    border-radius: 0.5rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+
+
+  @media ${(props) => props.theme.breakpoints.md}{
+   height: 45rem;
   }
-  @media screen and (min-width: var(extra-large-laptops-desktops)) {
-    max-width: 33rem;
-    min-height: 20rem;
-  } */
+
+  @media ${(props) => props.theme.breakpoints.md}{
+   height: 30rem;
+  }
+
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,55 +82,59 @@ const GlobalStyles = createGlobalStyle`
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: auto;
   object-fit: cover;
   object-position: center;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 90%;
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: $White;
-  width: 2.5rem;
-  height: 2.5rem;
+  background-image: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
+  width: 5rem;
+  height: 5rem;
   border-radius: 100%;
-  color: $Black;
-  @media screen and (min-width: $large-laptops-desktops) {
-    display: none;
+  color: white;
+  box-shadow: 0 0 5px black;
+
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 1rem;
-  font-weight: $font-weight-700;
+  font-size: 1.5rem;
+  font-weight: 700;
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1rem;
+  }
 }
 
 .swiper-pagination {
-  display: none;
-  @media screen and (min-width: $large-laptops-desktops) {
-    display: block;
+   
+  @media ${(props) => props.theme.breakpoints.md} {
+     display: none;
   }
 }
 
 .swiper-pagination-bullet {
   width: 4rem;
-  height: 4rem;
+  height: 7px;
   text-align: center;
-  opacity: 1;
-  border-radius: 0px;
-  border: 0.125rem solid transparent;
-  border-radius: 0.5rem;
-  background: transparent;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(270deg,#13ADC7 0%,#945DD6 100%);
 }
 
-.swiper-pagination-bullet:hover {
-  opacity: 0.6;
-}
-
-.swiper-pagination-bullet-active {
-  border: 0.125rem solid $Orange;
-  opacity: 0.6;
+.swiper-3d .swiper-slide-shadow {
+  background: none;
 }
 
 `;
