@@ -24,10 +24,13 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  html {
-    font-size: 62.5%;
+  :root {
     scroll-behavior: smooth;
     scroll-padding: 2rem;
+  }
+
+  html {
+    font-size: 62.5%;
     overflow-x: hidden;
   }
 
@@ -65,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
    height: 45rem;
   }
 
-  @media ${(props) => props.theme.breakpoints.md}{
+  @media ${(props) => props.theme.breakpoints.sm}{
    height: 30rem;
   }
 

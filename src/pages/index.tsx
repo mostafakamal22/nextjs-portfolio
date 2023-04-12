@@ -7,6 +7,7 @@ import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents/index";
+import { IsModalState } from "../context/IsModalState";
 
 const Home = () => {
   //State for hero Animation
@@ -21,26 +22,34 @@ const Home = () => {
   const [animateAcomplishments, setAnimateAcomplishments] = useState(false);
 
   return (
-    <Layout>
-      <Section grid>
-        <Hero startAnimation={startAnimation} />
-        <BgAnimation startAnimation={startAnimation} />
-      </Section>
+    <IsModalState>
+      <Layout>
+        <Section grid>
+          <Hero startAnimation={startAnimation} />
+          <BgAnimation startAnimation={startAnimation} />
+        </Section>
 
-      <Projects
-        animateProjects={animateProjects}
-        setAnimateProjects={setAnimateProjects}
-      />
-      <Technologies
-        animateTechs={animateTechs}
-        setAnimateTechs={setAnimateTechs}
-      />
-      <AboutMe animateAbout={animateAbout} setAnimateAbout={setAnimateAbout} />
-      <Acomplishments
-        animateAcomplishments={animateAcomplishments}
-        setAnimateAcomplishments={setAnimateAcomplishments}
-      />
-    </Layout>
+        <AboutMe
+          animateAbout={animateAbout}
+          setAnimateAbout={setAnimateAbout}
+        />
+
+        <Technologies
+          animateTechs={animateTechs}
+          setAnimateTechs={setAnimateTechs}
+        />
+
+        <Projects
+          animateProjects={animateProjects}
+          setAnimateProjects={setAnimateProjects}
+        />
+
+        <Acomplishments
+          animateAcomplishments={animateAcomplishments}
+          setAnimateAcomplishments={setAnimateAcomplishments}
+        />
+      </Layout>
+    </IsModalState>
   );
 };
 

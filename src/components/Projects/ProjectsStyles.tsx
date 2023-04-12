@@ -50,6 +50,15 @@ export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {
   );
 };
 
+export const ProjectDescription = styled(animated.div)`
+  max-width: 800px;
+  margin-inline: auto;
+  margin-block: 1rem;
+  padding: 0.25rem;
+  border: 5px solid lightblue;
+  border-radius: 5px;
+`;
+
 export const TitleContent = styled.div`
   margin-top: 1rem;
   text-align: center;

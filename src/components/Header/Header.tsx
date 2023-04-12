@@ -26,18 +26,26 @@ const Header = () => (
 
     <Div2>
       <li>
-        <Link href={"#projects"}>
-          <NavLink title="Projects">Projects</NavLink>
+        <Link href={"#about"}>
+          <NavLink href={"#about"} title="About">
+            About
+          </NavLink>
         </Link>
       </li>
+
       <li>
         <Link href={"#tech"}>
-          <NavLink title="Technologies">Technologies</NavLink>
+          <NavLink href={"#tech"} title="Technologies">
+            Technologies
+          </NavLink>
         </Link>
       </li>
+
       <li>
-        <Link href={"#about"}>
-          <NavLink title="About">About</NavLink>
+        <Link href={"#projects"}>
+          <NavLink href={"#projects"} title="Projects">
+            Projects
+          </NavLink>
         </Link>
       </li>
     </Div2>

@@ -34,7 +34,6 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
 
   return (
     <Section id="projects">
-      <SectionDivider />
       <SectionTitle main>Projects</SectionTitle>
 
       <BlogCard animateProjects={animateProjects}>
@@ -59,42 +58,3 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
 };
 
 export default Projects;
-
-{
-  /* {projects.map((project, index) => (
-          <BlogCard animateProjects={animateProjects} key={index}>
-            <LazyLoadComponent>
-              <Img src={project.image} loading="lazy" alt="Project" />
-            </LazyLoadComponent>
-            <TitleContent>
-              <HeaderThree header>{project.title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo className="card-info">{project.description}</CardInfo>
-            <div style={{ marginTop: "auto" }}>
-              <StackTitle>
-                Stack
-                <RiStackFill size={25} />
-              </StackTitle>
-              <TagList>
-                {project.tags.map((tag, i) => {
-                  return <Tag key={i}>{tag}</Tag>;
-                })}
-              </TagList>
-            </div>
-            <UtilityList>
-              {project?.visit && (
-                <ExternalLinks href={project.visit} target="_blank">
-                  Demo
-                  <AiFillPlayCircle size={20} />
-                </ExternalLinks>
-              )}
-
-              <ExternalLinks href={project.source} target="_blank">
-                Source
-                <AiFillCode size={20} />
-              </ExternalLinks>
-            </UtilityList>
-          </BlogCard>
-        ))} */
-}
