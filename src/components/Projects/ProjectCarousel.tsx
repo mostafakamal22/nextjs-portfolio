@@ -112,10 +112,12 @@ export const ProjectCarousel = () => {
             <AiFillCode size={20} />
           </ExternalLinks>
 
-          <ShowPhotosButton>
-            Photos
-            <AiFillPicture size={20} />
-          </ShowPhotosButton>
+          {project?.images?.length > 0 && (
+            <ShowPhotosButton>
+              Photos
+              <AiFillPicture size={20} />
+            </ShowPhotosButton>
+          )}
 
           {project?.visit && (
             <ExternalLinks href={project.visit} target="_blank">
