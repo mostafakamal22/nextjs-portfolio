@@ -31,9 +31,9 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "MERN TBT System & Dashboard",
+    title: "TBT Dashboard and Data Visualization System",
     description:
-      "A Full Stack MERN Application - From Designing to Deploying. it is a Data Visualization app Containing the Admin Dashborad and Resources' Charts Depending on The Data Entered By Admins",
+      "A Full Stack MERN Application that allows admins to manage the Trans border Tourism system. It includes a dashboard with data visualization charts to help admins make informed decisions based on the data entered into the system.",
     image: "/images/tbt-dashboard.webp",
     images: [
       "/images/tbt-dashboard.webp",
@@ -62,9 +62,9 @@ export const projects: Project[] = [
     id: nanoid(),
   },
   {
-    title: "TBT Website",
+    title: "Transborder Tourism Website",
     description:
-      "A (HTML - Tailwind - JS) Landing Page From Designing to Deploying. it is the Trans border Tourism's official website.",
+      "A Landing Page built using HTML, Tailwind, and Javascript for the official website of Transborder Tourism. The website showcases the services and facilities offered by the company.",
     image: "/images/tbt-website.webp",
     images: [
       "/images/tbt-website.webp",
@@ -87,9 +87,9 @@ export const projects: Project[] = [
     id: nanoid(),
   },
   {
-    title: "MERN E-Bank System",
+    title: "Online E-Bank System",
     description:
-      "A Full Stack MERN Application - from start to finish. it is an E-Bank system which users can create their secured online bank accounts so that they can (Deposit, Withdraw and Transfer) money anytime, also the system provide an efficient admins dashboard so that admins can handle users' account requests and users' bank account status easily.",
+      "A Full Stack MERN Application that allows users to create their secured online bank accounts and perform transactions such as deposit, withdraw, and transfer. The system also includes an efficient admin dashboard to handle account requests and manage users' bank accounts.",
     image: "/images/e-bank.webp",
     images: [
       "/images/e-bank.webp",
@@ -116,16 +116,11 @@ export const projects: Project[] = [
     id: nanoid(),
   },
   {
-    title: "E-Commerce",
+    title: "Sprints E-Commerce Platform",
     description:
-      "A Full Stack MERN Application - from start to finish. Clients could Navigate products, add products to cart, add products to wishlist, secure pay for products and more. Also the system provide a modern dashboard for admins so that they could do CRUD oprations on products, control carousel's images and users' account status.",
+      "A Full Stack MERN Application that allows clients to navigate products, add products to cart and wishlist, and securely pay for products. The system also includes a modern dashboard for admins to manage products and user accounts.",
     image: "/images/e-commerce.webp",
-    images: [
-      "/images/e-commerce.webp",
-      "/images/e-commerce.webp",
-      "/images/e-commerce.webp",
-      "/images/e-commerce.webp",
-    ],
+    images: [],
     tags: [
       "Reactjs",
       "React-Router-Dom",
@@ -138,9 +133,9 @@ export const projects: Project[] = [
     id: nanoid(),
   },
   {
-    title: "Twitter Tweet System",
+    title: "Twitter-like Tweeting System",
     description:
-      "A Front-End Application - It Provides a simple tweets system (add new tweet, like tweet and reply to tweet) by using Three State Management Systems [Redux, useReducer along with useContext and ReduxToolkit]. also uses lazy loading on profile images to enhance application performance.",
+      "A Front-End Application that provides a simple tweeting system with features such as adding new tweets, liking tweets, and replying to tweets. It uses three State Management Systems (Redux, useReducer along with useContext, and ReduxToolkit) and lazy loading on profile images to enhance application performance.",
     image: "/images/twitter.webp",
     images: [
       "/images/twitter.webp",
@@ -163,9 +158,9 @@ export const projects: Project[] = [
     id: nanoid(),
   },
   {
-    title: "Product Page",
+    title: "Product Page with Cart Functionality",
     description:
-      "A Front-End Application - where users should be able to View the optimal layout for the site depending on their device's screen size, See hover states for all interactive elements on the page, Open a lightbox gallery by clicking on the large product image, Switch the large product image by clicking on the small thumbnail images and Add items to the cart View the cart and remove items from it",
+      "A Front-End Application that allows users to view the optimal layout for the site based on their device's screen size, see hover states for all interactive elements on the page, open a lightbox gallery by clicking on the large product image, switch the large product image by clicking on the small thumbnail images, and add items to the cart. Users can also view the cart and remove items from it.",
     image: "/images/product-page.webp",
     images: [
       "/images/product-page.webp",
