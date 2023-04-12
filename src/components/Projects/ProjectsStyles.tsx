@@ -50,7 +50,7 @@ export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {
   );
 };
 
-export const ProjectDescription = styled(animated.div)`
+const StyledProjectDescription = styled(animated.div)`
   max-width: 800px;
   margin-inline: auto;
   margin-block: 1rem;
@@ -58,6 +58,32 @@ export const ProjectDescription = styled(animated.div)`
   border: 5px solid lightblue;
   border-radius: 5px;
 `;
+
+type ProjectDescriptionProps = {
+  children: React.ReactNode;
+  showProjectDescription: boolean;
+};
+
+export const ProjectDescription = ({
+  children,
+  showProjectDescription,
+}: ProjectDescriptionProps) => {
+  const transitions = useTransition(showProjectDescription, {
+    from: { opacity: 0, transform: "translateX(-20px)" },
+    enter: { opacity: 1, transform: "translateX(0px)" },
+    leave: { opacity: 0, transform: "translateX(-20px)" },
+    config: { ...config.slow, duration: 500 },
+  });
+
+  return transitions(
+    (style, item) =>
+      item && (
+        <StyledProjectDescription style={style}>
+          {children}
+        </StyledProjectDescription>
+      )
+  );
+};
 
 export const TitleContent = styled.div`
   margin-top: 1rem;

@@ -34,6 +34,7 @@ import { AiFillCode, AiFillPlayCircle } from "react-icons/ai";
 export const ProjectCarousel = () => {
   const [_projectId, setProjectId] = useState<string>(projects[0]?.id);
   const [project, setProject] = useState<Project>(projects[0]);
+  const [showProjectDescription, setShowProjectDescription] = useState(true);
 
   const pagination: PaginationOptions = {
     type: "bullets",
@@ -81,11 +82,13 @@ export const ProjectCarousel = () => {
         effect="cards"
         className="mySwiper"
         onSlideChange={handleSlideChange}
+        onSlideChangeTransitionStart={() => setShowProjectDescription(false)}
+        onSlideChangeTransitionEnd={() => setShowProjectDescription(true)}
       >
         {CarouselImages}
       </Swiper>
 
-      <ProjectDescription>
+      <ProjectDescription showProjectDescription={showProjectDescription}>
         <TitleContent>
           <HeaderThree header>{project.title}</HeaderThree>
           <Hr />
