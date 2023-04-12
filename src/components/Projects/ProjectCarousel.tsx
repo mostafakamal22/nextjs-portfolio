@@ -22,6 +22,7 @@ import {
   HeaderThree,
   Hr,
   ProjectDescription,
+  ShowPhotosButton,
   StackTitle,
   Tag,
   TagList,
@@ -29,7 +30,7 @@ import {
   UtilityList,
 } from "./ProjectsStyles";
 import { RiStackFill } from "react-icons/ri";
-import { AiFillCode, AiFillPlayCircle } from "react-icons/ai";
+import { AiFillCode, AiFillPicture, AiFillPlayCircle } from "react-icons/ai";
 
 export const ProjectCarousel = () => {
   const [_projectId, setProjectId] = useState<string>(projects[0]?.id);
@@ -80,7 +81,7 @@ export const ProjectCarousel = () => {
         pagination={pagination}
         modules={[Navigation, Pagination, EffectCards, Autoplay]}
         effect="cards"
-        className="mySwiper"
+        className="projectsSwiper"
         onSlideChange={handleSlideChange}
         onSlideChangeTransitionStart={() => setShowProjectDescription(false)}
         onSlideChangeTransitionEnd={() => setShowProjectDescription(true)}
@@ -93,7 +94,7 @@ export const ProjectCarousel = () => {
           <HeaderThree header>{project.title}</HeaderThree>
           <Hr />
         </TitleContent>
-        <CardInfo className="card-info">{project.description}</CardInfo>
+        <CardInfo>{project.description}</CardInfo>
         <div style={{ marginTop: "auto" }}>
           <StackTitle>
             Stack
@@ -106,17 +107,22 @@ export const ProjectCarousel = () => {
           </TagList>
         </div>
         <UtilityList>
+          <ExternalLinks href={project.source} target="_blank">
+            Source
+            <AiFillCode size={20} />
+          </ExternalLinks>
+
+          <ShowPhotosButton>
+            Photos
+            <AiFillPicture size={20} />
+          </ShowPhotosButton>
+
           {project?.visit && (
             <ExternalLinks href={project.visit} target="_blank">
               Demo
               <AiFillPlayCircle size={20} />
             </ExternalLinks>
           )}
-
-          <ExternalLinks href={project.source} target="_blank">
-            Source
-            <AiFillCode size={20} />
-          </ExternalLinks>
         </UtilityList>
       </ProjectDescription>
     </>

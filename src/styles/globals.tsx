@@ -24,12 +24,9 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  :root {
+  html {
     scroll-behavior: smooth;
     scroll-padding: 2rem;
-  }
-
-  html {
     font-size: 62.5%;
     overflow-x: hidden;
   }
@@ -56,13 +53,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   //Swiper Styles
-  .mySwiper {
-  position: relative;
-  width: 100%;
-  height: 60rem;
-  margin-inline: auto;
+  .projectsSwiper {
+  width: 60%;
+  height: 60rem;  
   border-radius: 1rem;
 
+  @media ${(props) => props.theme.breakpoints.lg} {
+    width: 100%;
+  }
 
   @media ${(props) => props.theme.breakpoints.md}{
    height: 45rem;

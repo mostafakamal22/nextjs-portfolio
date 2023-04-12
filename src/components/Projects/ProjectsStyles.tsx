@@ -27,8 +27,16 @@ export const GridContainer = styled.section`
     padding-bottom: 0;
   }
 `;
-const StyledBlogCard = styled(animated.div)`
+const StyledProjectContainer = styled(animated.div)`
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    flex-direction: column;
+  }
 `;
 
 type BlogCardTypes = {
@@ -36,7 +44,10 @@ type BlogCardTypes = {
   children: React.ReactNode;
 };
 
-export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {
+export const ProjectContainer = ({
+  animateProjects,
+  children,
+}: BlogCardTypes) => {
   const transitions = useTransition(animateProjects, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -46,15 +57,19 @@ export const BlogCard = ({ animateProjects, children }: BlogCardTypes) => {
 
   return transitions(
     (styles: any, item: any) =>
-      item && <StyledBlogCard style={styles}> {children} </StyledBlogCard>
+      item && (
+        <StyledProjectContainer style={styles}>
+          {" "}
+          {children}{" "}
+        </StyledProjectContainer>
+      )
   );
 };
 
 const StyledProjectDescription = styled(animated.div)`
-  max-width: 800px;
   margin-inline: auto;
   margin-block: 1rem;
-  padding: 0.25rem;
+  padding: 0.5rem 0.25rem;
   border: 5px solid lightblue;
   border-radius: 5px;
 `;
@@ -88,7 +103,6 @@ export const ProjectDescription = ({
 export const TitleContent = styled.div`
   margin-top: 1rem;
   text-align: center;
-  z-index: 20;
   width: 100%;
 `;
 
@@ -98,11 +112,13 @@ export const StackTitle = styled(TitleContent)`
   align-items: center;
   gap: 0.25rem;
   font-size: 2rem;
-  font-size: 2rem;
   margin-top: 1rem;
   text-align: center;
-  z-index: 20;
   width: 100%;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.5rem;
+  }
 `;
 
 type HeaderThreeProps = {
@@ -110,11 +126,15 @@ type HeaderThreeProps = {
 };
 
 export const HeaderThree = styled.h3<HeaderThreeProps>`
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
-  color: #9cc9e3;
+  color: lightblue;
   padding: 0.5rem 0;
   font-size: ${(props) => (props.header ? "3rem" : "2rem")};
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: ${(props) => (props.header ? "2rem" : "1rem")};
+  } ;
 `;
 
 export const Hr = styled.hr`
@@ -139,11 +159,13 @@ export const CardInfo = styled.p`
   width: 100%;
   padding: 0 50px;
   color: #e4e6e7;
-  font-style: 2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   text-align: justify;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 20px;
   }
 `;
 
@@ -161,7 +183,7 @@ export const ExternalLinks = styled.a`
   align-items: center;
   gap: 0.25rem;
   color: #d4c0c0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding: 1rem 1.5rem;
   background: #6b3030;
   border-radius: 15px;
@@ -169,6 +191,18 @@ export const ExternalLinks = styled.a`
   &:hover {
     background: #801414;
   }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+  }
+`;
+
+export const ShowPhotosButton = styled(ExternalLinks).attrs({
+  as: "button",
+})`
+  border: none;
+  cursor: pointer;
 `;
 
 export const TagList = styled.ul`
@@ -182,4 +216,8 @@ export const TagList = styled.ul`
 export const Tag = styled.li`
   color: #d8bfbf;
   font-size: 1.5rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.3rem;
+  }
 `;

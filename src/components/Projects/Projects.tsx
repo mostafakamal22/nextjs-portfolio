@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { BlogCard } from "./ProjectsStyles";
+import { ProjectContainer } from "./ProjectsStyles";
 import {
   Section,
   SectionDivider,
@@ -36,9 +36,9 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
     <Section id="projects">
       <SectionTitle main>Projects</SectionTitle>
 
-      <BlogCard animateProjects={animateProjects}>
+      <ProjectContainer animateProjects={animateProjects}>
         <ProjectCarousel />
-      </BlogCard>
+      </ProjectContainer>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Button>
