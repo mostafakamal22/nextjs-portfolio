@@ -18,7 +18,7 @@ import {
 
 const Footer = () => {
   return (
-    <FooterWrapper id="footer">
+    <FooterWrapper id="contacts">
       <SectionTitle>Contacts</SectionTitle>
       <LinkList>
         {contacts.map(({ title, text, icon, link }, index) => (

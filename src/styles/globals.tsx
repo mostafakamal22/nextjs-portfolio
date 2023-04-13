@@ -26,7 +26,6 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-    scroll-padding: 2rem;
     font-size: 62.5%;
     overflow-x: hidden;
   }

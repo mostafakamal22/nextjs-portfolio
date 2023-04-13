@@ -40,13 +40,19 @@ export const Div1 = styled.div`
   }
 `;
 export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 5;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 5px;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    justify-content: space-between;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 2 / 1 / 3 / 6;
+    flex-wrap: wrap;
   }
 `;
 export const Div3 = styled.div`
@@ -91,13 +97,16 @@ export const NavLink = styled.a`
     width: 100%;
   }
 
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.5rem;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
   }
 `;
 
-// Social Icons
-
+//Social Icons
 export const SocialIcons = styled.a`
   transition: 0.3s ease;
   color: white;

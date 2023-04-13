@@ -14,60 +14,88 @@ import {
   LogoLink,
 } from "./HeaderStyles";
 
-const Header = () => (
-  <Container>
-    <Div1>
-      <Link href="/">
-        <LogoLink href="/">
-          <DiCompass size={40} /> <LogoText>MK WebDev</LogoText>
-        </LogoLink>
-      </Link>
-    </Div1>
+const Header = () => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href") ?? "";
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 30;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
 
-    <Div2>
-      <li>
-        <Link href={"#about"}>
-          <NavLink href={"#about"} title="About">
-            About
-          </NavLink>
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <Container>
+      <Div1>
+        <Link href="/">
+          <LogoLink href="/">
+            <DiCompass size={40} /> <LogoText>MK WebDev</LogoText>
+          </LogoLink>
         </Link>
-      </li>
+      </Div1>
 
-      <li>
-        <Link href={"#tech"}>
-          <NavLink href={"#tech"} title="Technologies">
-            Technologies
-          </NavLink>
-        </Link>
-      </li>
+      <Div2>
+        <li>
+          <Link href="/">
+            <NavLink href={"#about"} title="About" onClick={handleClick}>
+              About
+            </NavLink>
+          </Link>
+        </li>
 
-      <li>
-        <Link href={"#projects"}>
-          <NavLink href={"#projects"} title="Projects">
-            Projects
-          </NavLink>
-        </Link>
-      </li>
-    </Div2>
+        <li>
+          <Link href="/">
+            <NavLink href={"#tech"} title="Technologies" onClick={handleClick}>
+              Technologies
+            </NavLink>
+          </Link>
+        </li>
 
-    <Div3>
-      <SocialIcons
-        title="Github Page"
-        href="https://github.com/mostafakamal22"
-        target="_blank"
-      >
-        <AiFillGithub size={30} />
-      </SocialIcons>
+        <li>
+          <Link href="/">
+            <NavLink href={"#projects"} title="Projects" onClick={handleClick}>
+              Projects
+            </NavLink>
+          </Link>
+        </li>
 
-      <SocialIcons
-        title="LinkedIn Page"
-        href="https://linkedin.com/in/mostafakamal22/"
-        target="_blank"
-      >
-        <AiFillLinkedin size={30} />
-      </SocialIcons>
-    </Div3>
-  </Container>
-);
+        <li>
+          <Link href="/">
+            <NavLink href={"#contacts"} title="Contacts" onClick={handleClick}>
+              Contacts
+            </NavLink>
+          </Link>
+        </li>
+      </Div2>
+
+      <Div3>
+        <SocialIcons
+          title="Github Page"
+          href="https://github.com/mostafakamal22"
+          target="_blank"
+        >
+          <AiFillGithub size={30} />
+        </SocialIcons>
+
+        <SocialIcons
+          title="LinkedIn Page"
+          href="https://linkedin.com/in/mostafakamal22/"
+          target="_blank"
+        >
+          <AiFillLinkedin size={30} />
+        </SocialIcons>
+      </Div3>
+    </Container>
+  );
+};
 
 export default Header;
