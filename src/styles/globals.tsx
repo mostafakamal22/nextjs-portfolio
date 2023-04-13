@@ -53,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   //Swiper Styles
-  .projectsSwiper {
+  .projects-swiper {
   width: 60%;
   height: 60rem;  
   border-radius: 1rem;
@@ -69,6 +69,25 @@ const GlobalStyles = createGlobalStyle`
   @media ${(props) => props.theme.breakpoints.sm}{
    height: 30rem;
   }
+
+}
+
+.project-modal-swiper {
+  width: 100%;
+  height: 100%;  
+  border-radius: 1rem;
+
+  /* @media ${(props) => props.theme.breakpoints.lg} {
+    width: 100%;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md}{
+   height: 45rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm}{
+   height: 30rem;
+  } */
 
 }
 

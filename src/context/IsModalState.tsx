@@ -7,12 +7,9 @@ export type StateProps = {
 
 export const IsModalState: React.FC<StateProps> = ({ children }) => {
   const [isModal, setIsModal] = useState(false);
-  const [projectId, setProjectId] = useState("");
 
   return (
-    <IsModalContext.Provider
-      value={{ isModal, setIsModal, projectId, setProjectId }}
-    >
+    <IsModalContext.Provider value={{ isModal, setIsModal }}>
       {children}
     </IsModalContext.Provider>
   );

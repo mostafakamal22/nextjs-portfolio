@@ -221,3 +221,34 @@ export const Tag = styled.li`
     font-size: 1.3rem;
   }
 `;
+
+export const StyledProjectModal = styled.div`
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+`;
+
+export const CloseModalButton = styled.button`
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+  outline: none;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 2px;
+  color: white;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`;

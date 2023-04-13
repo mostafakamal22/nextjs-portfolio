@@ -1,77 +1,73 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import {
   IsModalContext,
   IsModalContextType,
 } from "../../context/isModalContext";
-import {
-  AiFillCloseSquare,
-  AiFillCode,
-  AiFillPlayCircle,
-} from "react-icons/ai";
-import { projects } from "../../constants/constants";
-import {
-  CardInfo,
-  ExternalLinks,
-  HeaderThree,
-  Hr,
-  Img,
-  StackTitle,
-  Tag,
-  TagList,
-  TitleContent,
-  UtilityList,
-} from "./ProjectsStyles";
+import { AiOutlineClose } from "react-icons/ai";
+import { Project } from "../../constants/constants";
+import { CloseModalButton, StyledProjectModal } from "./ProjectsStyles";
+import { PaginationOptions, ZoomOptions } from "swiper/types";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { RiStackFill } from "react-icons/ri";
 
-export default function ProjectModal() {
-  const { projectId, setIsModal, isModal } = useContext(
-    IsModalContext
-  ) as IsModalContextType;
+//Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-  console.log(projectId);
-  const project = projects.find((project) => project.id === projectId);
+//Import Swiper styles
+import "swiper/css/bundle";
 
-  if (!project) return null;
+//Swiper Modules
+import { Navigation, Pagination, Zoom } from "swiper";
+
+type ProjectModalProps = {
+  project: Project;
+};
+
+export default function ProjectModal({ project }: ProjectModalProps) {
+  const { setIsModal } = useContext(IsModalContext) as IsModalContextType;
+
+  const pagination: PaginationOptions = {
+    type: "bullets",
+    clickable: true,
+  };
+
+  const zoom: ZoomOptions = {
+    maxRatio: 1.5,
+  };
+
+  const CarouselImages = useMemo(
+    () =>
+      project?.images?.map((image, index) => (
+        <SwiperSlide key={index}>
+          <LazyLoadComponent>
+            <div className="swiper-zoom-container" data-swiper-zoom="5">
+              <img src={image} alt={project?.title} loading="lazy" />
+            </div>
+          </LazyLoadComponent>
+
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </SwiperSlide>
+      )),
+    []
+  );
 
   return (
-    <div style={{ display: isModal ? "flex" : "none" }} className="modal">
-      <button className="btn btn-close-modal" onClick={() => setIsModal(false)}>
-        <AiFillCloseSquare size={25} />
-      </button>
+    <StyledProjectModal>
+      <CloseModalButton onClick={() => setIsModal(false)}>
+        <AiOutlineClose size={16} />
+      </CloseModalButton>
 
-      <LazyLoadComponent>
-        <Img src={project.image} loading="lazy" alt="Project" />
-      </LazyLoadComponent>
-      <TitleContent>
-        <HeaderThree header>{project.title}</HeaderThree>
-        <Hr />
-      </TitleContent>
-      <CardInfo className="card-info">{project.description}</CardInfo>
-      <div style={{ marginTop: "auto" }}>
-        <StackTitle>
-          Stack
-          <RiStackFill size={25} />
-        </StackTitle>
-        <TagList>
-          {project.tags.map((tag, i) => {
-            return <Tag key={i}>{tag}</Tag>;
-          })}
-        </TagList>
-      </div>
-      <UtilityList>
-        {project?.visit && (
-          <ExternalLinks href={project.visit} target="_blank">
-            Demo
-            <AiFillPlayCircle size={20} />
-          </ExternalLinks>
-        )}
-
-        <ExternalLinks href={project.source} target="_blank">
-          Source
-          <AiFillCode size={20} />
-        </ExternalLinks>
-      </UtilityList>
-    </div>
+      <Swiper
+        navigation
+        zoom={zoom}
+        pagination={pagination}
+        modules={[Navigation, Pagination, Zoom]}
+        className="project-modal-swiper"
+        // onSlideChange={handleSlideChange}
+        // onSlideChangeTransitionStart={() => setShowProjectDescription(false)}
+        // onSlideChangeTransitionEnd={() => setShowProjectDescription(true)}
+      >
+        {CarouselImages}
+      </Swiper>
+    </StyledProjectModal>
   );
 }

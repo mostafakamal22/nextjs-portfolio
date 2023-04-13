@@ -22,7 +22,6 @@ export const Section = styled.section`
   margin: 0 auto;
   max-width: 1040px;
   box-sizing: content-box;
-  position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
 

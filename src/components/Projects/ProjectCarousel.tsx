@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useContext } from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 //Import Swiper React components
@@ -31,11 +31,19 @@ import {
 } from "./ProjectsStyles";
 import { RiStackFill } from "react-icons/ri";
 import { AiFillCode, AiFillPicture, AiFillPlayCircle } from "react-icons/ai";
+import {
+  IsModalContext,
+  IsModalContextType,
+} from "../../context/isModalContext";
+import ProjectModal from "./ProjectModal";
 
 export const ProjectCarousel = () => {
   const [_projectId, setProjectId] = useState<string>(projects[0]?.id);
   const [project, setProject] = useState<Project>(projects[0]);
   const [showProjectDescription, setShowProjectDescription] = useState(true);
+  const { isModal, setIsModal } = useContext(
+    IsModalContext
+  ) as IsModalContextType;
 
   const pagination: PaginationOptions = {
     type: "bullets",
@@ -81,7 +89,7 @@ export const ProjectCarousel = () => {
         pagination={pagination}
         modules={[Navigation, Pagination, EffectCards, Autoplay]}
         effect="cards"
-        className="projectsSwiper"
+        className="projects-swiper"
         onSlideChange={handleSlideChange}
         onSlideChangeTransitionStart={() => setShowProjectDescription(false)}
         onSlideChangeTransitionEnd={() => setShowProjectDescription(true)}
@@ -113,7 +121,7 @@ export const ProjectCarousel = () => {
           </ExternalLinks>
 
           {project?.images?.length > 0 && (
-            <ShowPhotosButton>
+            <ShowPhotosButton onClick={() => setIsModal(true)}>
               Photos
               <AiFillPicture size={20} />
             </ShowPhotosButton>
@@ -127,6 +135,8 @@ export const ProjectCarousel = () => {
           )}
         </UtilityList>
       </ProjectDescription>
+
+      {isModal && <ProjectModal project={project} />}
     </>
   );
 };
