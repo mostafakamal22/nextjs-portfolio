@@ -41,9 +41,7 @@ export const ProjectCarousel = () => {
   const [_projectId, setProjectId] = useState<string>(projects[0]?.id);
   const [project, setProject] = useState<Project>(projects[0]);
   const [showProjectDescription, setShowProjectDescription] = useState(true);
-  const { isModal, setIsModal } = useContext(
-    IsModalContext
-  ) as IsModalContextType;
+  const { setIsModal } = useContext(IsModalContext) as IsModalContextType;
 
   const pagination: PaginationOptions = {
     type: "bullets",
@@ -136,7 +134,7 @@ export const ProjectCarousel = () => {
         </UtilityList>
       </ProjectDescription>
 
-      {isModal && <ProjectModal project={project} />}
+      <ProjectModal project={project} />
     </>
   );
 };

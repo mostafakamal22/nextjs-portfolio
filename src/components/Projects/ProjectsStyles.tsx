@@ -56,11 +56,10 @@ export const ProjectContainer = ({
   });
 
   return transitions(
-    (styles: any, item: any) =>
+    (styles, item) =>
       item && (
         <StyledProjectContainer style={styles}>
-          {" "}
-          {children}{" "}
+          {children}
         </StyledProjectContainer>
       )
   );
@@ -222,7 +221,7 @@ export const Tag = styled.li`
   }
 `;
 
-export const StyledProjectModal = styled.div`
+export const StyledProjectModal = styled(animated.div)`
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -236,7 +235,7 @@ export const StyledProjectModal = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
 `;
 
-export const CloseModalButton = styled.button`
+export const CloseModalButton = styled(animated.button)`
   margin-left: auto;
   display: flex;
   justify-content: center;
