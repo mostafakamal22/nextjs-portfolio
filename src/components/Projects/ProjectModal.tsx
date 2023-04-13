@@ -39,7 +39,7 @@ export default function ProjectModal({ project }: ProjectModalProps) {
       project?.images?.map((image, index) => (
         <SwiperSlide key={index}>
           <LazyLoadComponent>
-            <div className="swiper-zoom-container" data-swiper-zoom="5">
+            <div className="swiper-zoom-container">
               <img src={image} alt={project?.title} loading="lazy" />
             </div>
           </LazyLoadComponent>
