@@ -51,7 +51,7 @@ export default function ProjectModal({ project }: ProjectModalProps) {
 
   const swiperSpring = useSpring({
     transform: isModal ? "translateY(0vh)" : "translateY(100vh)",
-    delay: isModal ? 400 : 400,
+    delay: isModal ? 600 : 400,
     reverse: !isModal,
   });
 
