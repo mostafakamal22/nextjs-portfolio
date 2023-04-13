@@ -25,9 +25,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
+    --scrollbar-thumb: #000 !important;
+    --scrollbar-track: transparent !important;
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   }
 
   body {
@@ -81,8 +85,6 @@ const GlobalStyles = createGlobalStyle`
 .project-modal-swiper {
   width: 100%;
   height: 100%;  
-   
-
 }
 
 .swiper-slide {
