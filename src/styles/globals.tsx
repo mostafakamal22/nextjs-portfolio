@@ -56,7 +56,10 @@ const GlobalStyles = createGlobalStyle`
   .projects-swiper {
   width: 60%;
   height: 60rem;  
-  border-radius: 1rem;
+  background-image: url('/blob.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media ${(props) => props.theme.breakpoints.lg} {
     width: 100%;
@@ -72,22 +75,14 @@ const GlobalStyles = createGlobalStyle`
 
 }
 
+.swiper-wrapper{
+  backdrop-filter: blur(.5px);
+}
+
 .project-modal-swiper {
   width: 100%;
   height: 100%;  
-  border-radius: 1rem;
-
-  /* @media ${(props) => props.theme.breakpoints.lg} {
-    width: 100%;
-  }
-
-  @media ${(props) => props.theme.breakpoints.md}{
-   height: 45rem;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm}{
-   height: 30rem;
-  } */
+   
 
 }
 
@@ -138,7 +133,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 .swiper-pagination {
-   
+ 
   @media ${(props) => props.theme.breakpoints.md} {
      display: none;
   }
