@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import {
   IsModalContext,
   IsModalContextType,
@@ -50,6 +50,15 @@ export default function ProjectModal({ project }: ProjectModalProps) {
     []
   );
 
+  useEffect(() => {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     <StyledProjectModal>
       <CloseModalButton onClick={() => setIsModal(false)}>
@@ -62,9 +71,6 @@ export default function ProjectModal({ project }: ProjectModalProps) {
         pagination={pagination}
         modules={[Navigation, Pagination, Zoom]}
         className="project-modal-swiper"
-        // onSlideChange={handleSlideChange}
-        // onSlideChangeTransitionStart={() => setShowProjectDescription(false)}
-        // onSlideChangeTransitionEnd={() => setShowProjectDescription(true)}
       >
         {CarouselImages}
       </Swiper>

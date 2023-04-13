@@ -225,7 +225,7 @@ export const Tag = styled.li`
 export const StyledProjectModal = styled.div`
   position: fixed;
   inset: 0;
-  z-index: 20;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
