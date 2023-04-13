@@ -115,14 +115,16 @@ const StyledListItem = styled(animated.li)`
   @media ${(props) => props.theme.breakpoints.sm} {
     margin-bottom: 14px;
     max-width: 320px;
+    width: 100%;
     flex-direction: row;
+    gap: 0.5rem;
   }
 `;
 
 type ListTypes = {
-  animateTechs: boolean,
-  children: any
-}
+  animateTechs: boolean;
+  children: React.ReactNode;
+};
 
 export const ListItem = ({ animateTechs, children }: ListTypes) => {
   const transitions = useTransition(animateTechs, {

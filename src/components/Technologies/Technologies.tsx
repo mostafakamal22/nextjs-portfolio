@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { technologies } from "../../constants/constants";
 import {
   Section,
@@ -16,7 +16,7 @@ import {
 
 type TechProps = {
   animateTechs: boolean;
-  setAnimateTechs(bool: boolean): any;
+  setAnimateTechs: Dispatch<SetStateAction<boolean>>;
 };
 
 const Technologies = ({ animateTechs, setAnimateTechs }: TechProps) => {
@@ -47,7 +47,7 @@ const Technologies = ({ animateTechs, setAnimateTechs }: TechProps) => {
       <List>
         {technologies.map(({ id, title, paragraph, icon }) => (
           <ListItem animateTechs={animateTechs} key={id}>
-            {icon}
+            <div style={{ flexBasis: "10%" }}>{icon}</div>
             <ListContainer>
               <ListTitle>{title}</ListTitle>
               <ListParagraph>
