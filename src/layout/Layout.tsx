@@ -5,7 +5,7 @@ import Header from "../components/Header/Header";
 import { Container } from "./LayoutStyles";
 
 interface LayoutProps {
-  children: any;
+  children: React.ReactNode;
 }
 
 export const Layout = ({ children }: LayoutProps) => {
