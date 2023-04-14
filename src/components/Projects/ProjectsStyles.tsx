@@ -29,6 +29,7 @@ export const GridContainer = styled.section`
 `;
 const StyledProjectContainer = styled(animated.div)`
   width: 100%;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
