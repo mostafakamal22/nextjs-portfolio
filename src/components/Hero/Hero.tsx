@@ -12,6 +12,24 @@ interface HeroProps {
 }
 
 const Hero = ({ startAnimation }: HeroProps) => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href") ?? "";
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 30;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Section row nopadding>
       <LeftSection startAnimation={startAnimation}>
@@ -25,7 +43,7 @@ const Hero = ({ startAnimation }: HeroProps) => {
         </SectionText>
 
         <Button>
-          <a style={{ color: "white" }} href="#footer">
+          <a style={{ color: "white" }} href="#contacts" onClick={handleClick}>
             Contact Me
           </a>
         </Button>
