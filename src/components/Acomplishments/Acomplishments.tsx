@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { acomplishments } from "../../constants/constants";
 
 import {
@@ -10,7 +10,7 @@ import { Box, Boxes, BoxNum, BoxText } from "./AcomplishmentsStyles";
 
 interface AcomplishmentsProps {
   animateAcomplishments: boolean;
-  setAnimateAcomplishments(bol: boolean): void;
+  setAnimateAcomplishments: Dispatch<SetStateAction<boolean>>;
 }
 
 const Acomplishments = ({
