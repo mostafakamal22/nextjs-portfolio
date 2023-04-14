@@ -35,6 +35,7 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
 
   return (
     <Section id="projects">
+      <SectionDivider />
       <SectionTitle main>Projects</SectionTitle>
 
       <SectionText>
