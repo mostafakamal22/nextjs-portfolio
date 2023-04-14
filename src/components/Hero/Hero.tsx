@@ -34,17 +34,22 @@ const Hero = ({ startAnimation }: HeroProps) => {
     <Section row nopadding>
       <LeftSection startAnimation={startAnimation}>
         <SectionTitle main>
-          Welcome To <br />
-          My PORTFOLIO
+          Discover the
+          <br />
+          Magic of My
+          <br />
+          Web Creations
         </SectionTitle>
 
         <SectionText>
-          I am Mostafa, a MERN Stack Developer & Front-End Web Developer.
+          Hi, I'm Mostafa - MERN Stack Developer and Front-End Web Wizard! I
+          specialize in creating stunning, user-friendly web experiences that
+          drive results for businesses and organizations.
         </SectionText>
 
         <Button>
           <a style={{ color: "white" }} href="#contacts" onClick={handleClick}>
-            Contact Me
+            Let's Connect!
           </a>
         </Button>
       </LeftSection>
