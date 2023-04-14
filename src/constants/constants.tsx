@@ -150,7 +150,7 @@ export const projects: Project[] = [
     title: "Sprints E-Commerce Platform",
     description:
       "A Full Stack MERN Application that allows clients to navigate products, add products to cart and wishlist, and securely pay for products. The system also includes a modern dashboard for admins to manage products and user accounts.",
-    image: "/images/e-commerce.webp",
+    image: "/images/cover/e-commerce.webp",
     images: [],
     tags: [
       "Reactjs",
