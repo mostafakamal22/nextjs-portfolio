@@ -27,6 +27,18 @@ export const LogoLink = styled.a`
 export const LogoText = styled.span`
   font-size: 2rem;
   font-weight: bold;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    font-size: 1.8rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.6rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Div1 = styled.div`
