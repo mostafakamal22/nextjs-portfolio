@@ -163,7 +163,7 @@ export const CardInfo = styled.p`
   text-align: justify;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 20px;
   }
 `;
