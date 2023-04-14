@@ -42,9 +42,9 @@ const Hero = ({ startAnimation }: HeroProps) => {
         </SectionTitle>
 
         <SectionText>
-          Hi, I'm Mostafa - MERN Stack Developer and Front-End Web Wizard! I
-          specialize in creating stunning, user-friendly web experiences that
-          drive results for businesses and organizations.
+          Hi, I'm Mostafa - MERN Stack Developer and Front-End Web Wizard!
+          <br /> I specialize in creating stunning, user-friendly web
+          experiences that drive results for businesses and organizations.
         </SectionText>
 
         <Button>

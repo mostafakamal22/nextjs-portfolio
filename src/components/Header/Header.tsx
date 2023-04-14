@@ -46,8 +46,8 @@ const Header = () => {
       <Div2>
         <li>
           <Link href="/">
-            <NavLink href={"#about"} title="About" onClick={handleClick}>
-              About
+            <NavLink href={"#projects"} title="Projects" onClick={handleClick}>
+              Projects
             </NavLink>
           </Link>
         </li>
@@ -62,8 +62,8 @@ const Header = () => {
 
         <li>
           <Link href="/">
-            <NavLink href={"#projects"} title="Projects" onClick={handleClick}>
-              Projects
+            <NavLink href={"#about"} title="About" onClick={handleClick}>
+              About
             </NavLink>
           </Link>
         </li>

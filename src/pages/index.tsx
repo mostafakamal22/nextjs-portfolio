@@ -29,9 +29,9 @@ const Home = () => {
           <BgAnimation startAnimation={startAnimation} />
         </Section>
 
-        <AboutMe
-          animateAbout={animateAbout}
-          setAnimateAbout={setAnimateAbout}
+        <Projects
+          animateProjects={animateProjects}
+          setAnimateProjects={setAnimateProjects}
         />
 
         <Technologies
@@ -39,9 +39,9 @@ const Home = () => {
           setAnimateTechs={setAnimateTechs}
         />
 
-        <Projects
-          animateProjects={animateProjects}
-          setAnimateProjects={setAnimateProjects}
+        <AboutMe
+          animateAbout={animateAbout}
+          setAnimateAbout={setAnimateAbout}
         />
 
         <Acomplishments
