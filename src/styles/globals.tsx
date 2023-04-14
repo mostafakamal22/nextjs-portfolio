@@ -100,7 +100,7 @@ const GlobalStyles = createGlobalStyle`
   display: block;
   width: 70%;
   height: auto;
-  object-fit: cover;
+  /* object-fit: cover; */
   object-position: center;
 
   @media ${(props) => props.theme.breakpoints.md} {

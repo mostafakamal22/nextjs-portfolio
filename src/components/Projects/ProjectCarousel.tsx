@@ -3,7 +3,7 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 //Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCards } from "swiper";
+import { EffectCards } from "swiper";
 
 //Import Swiper styles
 import "swiper/css/bundle";
@@ -11,11 +11,7 @@ import "swiper/css/bundle";
 //Swiper Modules
 import { Navigation, Pagination } from "swiper";
 import { Project, projects } from "../../constants/constants";
-import {
-  AutoplayOptions,
-  PaginationOptions,
-  Swiper as SwiperType,
-} from "swiper/types";
+import { PaginationOptions, Swiper as SwiperType } from "swiper/types";
 import {
   CardInfo,
   ExternalLinks,
@@ -41,15 +37,12 @@ export const ProjectCarousel = () => {
   const [_projectId, setProjectId] = useState<string>(projects[0]?.id);
   const [project, setProject] = useState<Project>(projects[0]);
   const [showProjectDescription, setShowProjectDescription] = useState(true);
+
   const { setIsModal } = useContext(IsModalContext) as IsModalContextType;
 
   const pagination: PaginationOptions = {
     type: "bullets",
     clickable: true,
-  };
-
-  const autoplay: AutoplayOptions = {
-    delay: 5000,
   };
 
   const CarouselImages = useMemo(
@@ -83,9 +76,8 @@ export const ProjectCarousel = () => {
     <>
       <Swiper
         navigation
-        autoplay={autoplay}
         pagination={pagination}
-        modules={[Navigation, Pagination, EffectCards, Autoplay]}
+        modules={[Navigation, Pagination, EffectCards]}
         effect="cards"
         className="projects-swiper"
         onSlideChange={handleSlideChange}

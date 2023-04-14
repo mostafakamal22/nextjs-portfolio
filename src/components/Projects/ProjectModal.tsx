@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect, useMemo, useRef } from "react";
 import {
   IsModalContext,
   IsModalContextType,
@@ -10,7 +10,7 @@ import { PaginationOptions, ZoomOptions } from "swiper/types";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 //Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
 //Import Swiper styles
 import "swiper/css/bundle";
@@ -27,6 +27,8 @@ export default function ProjectModal({ project }: ProjectModalProps) {
   const { isModal, setIsModal } = useContext(
     IsModalContext
   ) as IsModalContextType;
+
+  const swiperRef = useRef<SwiperRef | null>(null);
 
   const pagination: PaginationOptions = {
     type: "bullets",
@@ -68,19 +70,27 @@ export default function ProjectModal({ project }: ProjectModalProps) {
           <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </SwiperSlide>
       )),
-    []
+    [project]
   );
 
   useEffect(() => {
     if (isModal) {
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflowY = "hidden";
+      document.body.style.overflowY = "hidden";
     }
 
     return () => {
-      document.documentElement.style.overflow = "auto";
-      document.body.style.overflow = "auto";
+      document.documentElement.style.overflowY = "auto";
+      document.body.style.overflowY = "auto";
     };
+  }, [isModal]);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      setTimeout(() => {
+        swiperRef?.current?.swiper?.slideTo(0);
+      }, 1000);
+    }
   }, [isModal]);
 
   return (
@@ -91,6 +101,7 @@ export default function ProjectModal({ project }: ProjectModalProps) {
 
       <animated.div className="project-modal-swiper" style={swiperSpring}>
         <Swiper
+          ref={swiperRef}
           navigation
           zoom={zoom}
           pagination={pagination}
