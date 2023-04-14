@@ -68,7 +68,7 @@ export const ProjectContainer = ({
 const StyledProjectDescription = styled(animated.div)`
   margin-inline: auto;
   margin-block: 1rem;
-  padding: 0.5rem 0.25rem;
+  padding: 1rem 0.5rem;
   border: 5px solid lightblue;
   border-radius: 5px;
 `;
@@ -132,7 +132,7 @@ export const HeaderThree = styled.h3<HeaderThreeProps>`
   font-size: ${(props) => (props.header ? "3rem" : "2rem")};
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: ${(props) => (props.header ? "2rem" : "1rem")};
+    font-size: ${(props) => (props.header ? "2.5rem" : "1.5rem")};
   } ;
 `;
 
