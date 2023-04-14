@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 import { ProjectContainer } from "./ProjectsStyles";
 import {
   Section,
   SectionDivider,
+  SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
@@ -11,7 +12,7 @@ import { ProjectCarousel } from "./ProjectCarousel";
 
 interface ProjectsProps {
   animateProjects: boolean;
-  setAnimateProjects(bool: boolean): void;
+  setAnimateProjects: Dispatch<SetStateAction<boolean>>;
 }
 
 const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
@@ -35,6 +36,13 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
   return (
     <Section id="projects">
       <SectionTitle main>Projects</SectionTitle>
+
+      <SectionText>
+        Take a closer look at some of the innovative web projects I've had the
+        pleasure of working on. Each one showcases my dedication to creating
+        stunning, user-friendly web experiences that drive results for
+        businesses and organizations.
+      </SectionText>
 
       <ProjectContainer animateProjects={animateProjects}>
         <ProjectCarousel />
