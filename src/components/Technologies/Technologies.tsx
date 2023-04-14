@@ -40,8 +40,10 @@ const Technologies = ({ animateTechs, setAnimateTechs }: TechProps) => {
     <Section id="tech">
       <SectionTitle>Technologies</SectionTitle>
       <SectionText>
-        I've worked with a range of technologies in the world of web
-        develpoment. From Backend To Design.
+        I bring a wealth of experience to the table when it comes to web
+        development. From back-end programming to design, I have worked with a
+        diverse range of technologies and tools to deliver exceptional results
+        for my clients.
       </SectionText>
 
       <List>
