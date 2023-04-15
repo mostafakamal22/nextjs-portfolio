@@ -39,9 +39,7 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
 
       <SectionText>
         Take a closer look at some of the innovative web projects I've had the
-        pleasure of working on. Each one showcases my dedication to creating
-        stunning, user-friendly web experiences that drive results for
-        businesses and organizations.
+        pleasure of working on.
       </SectionText>
 
       <ProjectContainer animateProjects={animateProjects}>
