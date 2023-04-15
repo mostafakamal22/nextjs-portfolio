@@ -13,6 +13,7 @@ import { IoCall } from "react-icons/io5";
 import { RiWhatsappFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 import { BsClipboardData } from "react-icons/bs";
+import { FaLanguage } from "react-icons/fa";
 
 import { nanoid } from "nanoid";
 
@@ -302,6 +303,12 @@ export const technologies: readonly {
     title: "Data Visualization",
     paragraph: "ChartJs And React-Chartjs",
     icon: <BsClipboardData size={40} />,
+    id: nanoid(),
+  },
+  {
+    title: "Conversational AI",
+    paragraph: "ChatGPT",
+    icon: <FaLanguage size={40} />,
     id: nanoid(),
   },
   {
