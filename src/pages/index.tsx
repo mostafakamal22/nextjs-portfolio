@@ -8,6 +8,7 @@ import Technologies from "../components/Technologies/Technologies";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents/index";
 import { IsModalState } from "../context/IsModalState";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   //State for hero Animation
@@ -48,6 +49,8 @@ const Home = () => {
           animateAcomplishments={animateAcomplishments}
           setAnimateAcomplishments={setAnimateAcomplishments}
         />
+
+        <ScrollToTop />
       </Layout>
     </IsModalState>
   );
