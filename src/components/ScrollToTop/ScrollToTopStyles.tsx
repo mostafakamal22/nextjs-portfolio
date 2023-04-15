@@ -28,7 +28,7 @@ export const StyledAnimatedScrollToTop = styled(StyledScrollToTop)`
   position: fixed;
   right: 20px;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 8888;
 
   @media ${(props) => props.theme.breakpoints.md} {
     right: 10px;
