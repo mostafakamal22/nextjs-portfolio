@@ -322,7 +322,7 @@ export const technologies: readonly {
   },
   {
     title: "Front-End Frameworks",
-    paragraph: "ReactJS And Basics Of NextJS.",
+    paragraph: "ReactJS And NextJS.",
     icon: <DiReact size={40} />,
     id: nanoid(),
   },
