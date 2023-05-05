@@ -134,7 +134,7 @@ export const HeaderThree = styled.h3<HeaderThreeProps>`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: ${(props) => (props.header ? "2.5rem" : "1.5rem")};
-  } ;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -234,6 +234,10 @@ export const StyledProjectModal = styled(animated.div)`
   padding: 4rem 2rem;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.3);
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 1.5rem;
+  }
 `;
 
 export const CloseModalButton = styled(animated.button)`
