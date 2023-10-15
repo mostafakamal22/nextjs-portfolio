@@ -450,7 +450,7 @@ export const acomplishments: readonly {
   number: number;
   text: string;
 }[] = [
-  { number: 24, text: "Github Projects" },
+  { number: 27, text: "Github Projects" },
   { number: 1, text: "Github Padge" },
   { number: 5, text: "LinkedIn Skill Padges" },
 ];
