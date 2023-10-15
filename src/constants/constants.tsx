@@ -7,7 +7,7 @@ import {
   DiReact,
   DiTerminal,
 } from "react-icons/di";
-import { SiAuthy, SiHtml5 } from "react-icons/si";
+import { SiAuthy, SiHtml5, SiPrisma } from "react-icons/si";
 
 import { IoCall } from "react-icons/io5";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -384,15 +384,20 @@ export const technologies: readonly {
   },
   {
     title: "Front-End State Management",
-    paragraph:
-      "Redux, Redux-Toolkit And React-UseContext-UseRuducer State Management System.",
+    paragraph: "Redux, Zustand, Redux-Toolkit And React-Context.",
     icon: <DiReact size={40} />,
     id: nanoid(),
   },
-
+  {
+    title: "Front-End Data Fetching & Caching",
+    paragraph:
+      "Axios, Redux Toolkit Query(RTQ), React Query And Stale-While-Revalidate(SWR).",
+    icon: <DiReact size={40} />,
+    id: nanoid(),
+  },
   {
     title: "Back-End",
-    paragraph: "NodeJS And MongoDB.",
+    paragraph: "NodeJS, MongoDB And MySql.",
     icon: <DiDatabase size={40} />,
     id: nanoid(),
   },
@@ -403,8 +408,14 @@ export const technologies: readonly {
     id: nanoid(),
   },
   {
+    title: "Object Relational Mapping (ORM)",
+    paragraph: "Prisma",
+    icon: <SiPrisma size={40} />,
+    id: nanoid(),
+  },
+  {
     title: "Authentication",
-    paragraph: "Json Web Tokens(JWT).",
+    paragraph: "NextAuth And Json Web Tokens(JWT).",
     icon: <SiAuthy size={40} />,
     id: nanoid(),
   },
