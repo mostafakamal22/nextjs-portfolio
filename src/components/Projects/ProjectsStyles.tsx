@@ -251,6 +251,7 @@ export const CloseModalButton = styled(animated.button)`
   border-radius: 4px;
   padding: 2px;
   color: white;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.9;
