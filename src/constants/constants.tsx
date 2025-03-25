@@ -8,7 +8,6 @@ import {
   DiTerminal,
 } from "react-icons/di";
 import { SiAuthy, SiHtml5, SiPrisma } from "react-icons/si";
-
 import { IoCall } from "react-icons/io5";
 import { RiWhatsappFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
@@ -222,22 +221,57 @@ export const projects: Project[] = [
     id: nanoid(),
   },
   {
-    title: "Sprints E-Commerce Platform",
+    title: "Trendora E-Commerce Platform",
     description:
-      "A Full Stack MERN Application that allows clients to navigate products, add products to cart and wishlist, and securely pay for products. The system also includes a modern dashboard for admins to manage products and user accounts.",
-    image: "/images/cover/e-commerce.webp",
-    images: [],
+      "Trendora is an eCommerce platform designed to deliver a seamless and engaging shopping experience. It features a modern and intuitive UI, dynamic product displays, and a powerful cart system that allows users to easily browse, select, and purchase products. ",
+    image: "/images/cover/trendora.webp",
+    images: [
+      "/images/Trendora/trendora(1).webp",
+      "/images/Trendora/trendora(2).webp",
+      "/images/Trendora/trendora(3).webp",
+      "/images/Trendora/trendora(4).webp",
+      "/images/Trendora/trendora(5).webp",
+      "/images/Trendora/trendora(6).webp",
+      "/images/Trendora/trendora(7).webp",
+      "/images/Trendora/trendora(8).webp",
+      "/images/Trendora/trendora(9).webp",
+      "/images/Trendora/trendora(10).webp",
+      "/images/Trendora/trendora(11).webp",
+      "/images/Trendora/trendora(12).webp",
+      "/images/Trendora/trendora(13).webp",
+    ],
     tags: [
       "Reactjs",
+      "Formik",
+      "Yup",
       "React-Router-Dom",
-      "React-Context",
       "React-Hooks",
+      "Axios",
+      "React-query",
+      "Flowbite",
       "TailwindCSS",
     ],
-    source: "https://github.com/mostafakamal22/sprints-e-commerce-project",
-    visit: null,
+    source: "https://github.com/mostafakamal22/trendora",
+    visit: "https://trendora-react.vercel.app",
     id: nanoid(),
   },
+  // {
+  //   title: "Sprints E-Commerce Platform",
+  //   description:
+  //     "A Full Stack MERN Application that allows clients to navigate products, add products to cart and wishlist, and securely pay for products. The system also includes a modern dashboard for admins to manage products and user accounts.",
+  //   image: "/images/cover/e-commerce.webp",
+  //   images: [],
+  //   tags: [
+  //     "Reactjs",
+  //     "React-Router-Dom",
+  //     "React-Context",
+  //     "React-Hooks",
+  //     "TailwindCSS",
+  //   ],
+  //   source: "https://github.com/mostafakamal22/sprints-e-commerce-project",
+  //   visit: null,
+  //   id: nanoid(),
+  // },
   {
     title: "Twitter-like Tweeting System",
     description:
@@ -271,43 +305,43 @@ export const projects: Project[] = [
     visit: "https://mostafakamal22.github.io/twitter-tweet-system/",
     id: nanoid(),
   },
-  {
-    title: "Product Page with Cart Functionality",
-    description:
-      "A Front-End Application that allows users to view the optimal layout for the site based on their device's screen size, see hover states for all interactive elements on the page, open a lightbox gallery by clicking on the large product image, switch the large product image by clicking on the small thumbnail images, and add items to the cart. Users can also view the cart and remove items from it.",
-    image: "/images/cover/product-page.webp",
-    images: [
-      "/images/Product page/Product-page(1).webp",
-      "/images/Product page/Product-page(2).webp",
-      "/images/Product page/Product-page(3).webp",
-      "/images/Product page/Product-page(4).webp",
-      "/images/Product page/Product-page(5).webp",
-      "/images/Product page/Product-page(6).webp",
-      "/images/Product page/Product-page(7).webp",
-      "/images/Product page/Product-page(8).webp",
-      "/images/Product page/Product-page(9).webp",
-      "/images/Product page/Product-page(10).webp",
-      "/images/Product page/Product-page(11).webp",
-      "/images/Product page/Product-page(12).webp",
-      "/images/Product page/Product-page(13).webp",
-    ],
-    tags: [
-      "Reactjs",
-      "TypeScript",
-      "Sass",
-      "React-Hooks",
-      "LocalStorage",
-      "Lazy-Loading",
-      "Framer-Motion",
-      "Swiper",
-      "Jest",
-      "React-Testing-Library",
-    ],
-    source:
-      "https://github.com/mostafakamal22/React-TS-Sass-Ecommerce-Product-Page",
-    visit: "https://mostafakamal22.github.io/ecommerce-product-page/",
-    id: nanoid(),
-  },
+  // {
+  //   title: "Product Page with Cart Functionality",
+  //   description:
+  //     "A Front-End Application that allows users to view the optimal layout for the site based on their device's screen size, see hover states for all interactive elements on the page, open a lightbox gallery by clicking on the large product image, switch the large product image by clicking on the small thumbnail images, and add items to the cart. Users can also view the cart and remove items from it.",
+  //   image: "/images/cover/product-page.webp",
+  //   images: [
+  //     "/images/Product page/Product-page(1).webp",
+  //     "/images/Product page/Product-page(2).webp",
+  //     "/images/Product page/Product-page(3).webp",
+  //     "/images/Product page/Product-page(4).webp",
+  //     "/images/Product page/Product-page(5).webp",
+  //     "/images/Product page/Product-page(6).webp",
+  //     "/images/Product page/Product-page(7).webp",
+  //     "/images/Product page/Product-page(8).webp",
+  //     "/images/Product page/Product-page(9).webp",
+  //     "/images/Product page/Product-page(10).webp",
+  //     "/images/Product page/Product-page(11).webp",
+  //     "/images/Product page/Product-page(12).webp",
+  //     "/images/Product page/Product-page(13).webp",
+  //   ],
+  //   tags: [
+  //     "Reactjs",
+  //     "TypeScript",
+  //     "Sass",
+  //     "React-Hooks",
+  //     "LocalStorage",
+  //     "Lazy-Loading",
+  //     "Framer-Motion",
+  //     "Swiper",
+  //     "Jest",
+  //     "React-Testing-Library",
+  //   ],
+  //   source:
+  //     "https://github.com/mostafakamal22/React-TS-Sass-Ecommerce-Product-Page",
+  //   visit: "https://mostafakamal22.github.io/ecommerce-product-page/",
+  //   id: nanoid(),
+  // },
   {
     title: "Space Tourism Multi-Page Website",
     description:
