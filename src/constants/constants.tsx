@@ -484,8 +484,8 @@ export const acomplishments: readonly {
   number: number;
   text: string;
 }[] = [
-  { number: 27, text: "Github Projects" },
-  { number: 1, text: "Github Padge" },
+  { number: 31, text: "Github Projects" },
+  { number: 2, text: "Github Padges" },
   { number: 5, text: "LinkedIn Skill Padges" },
 ];
 
