@@ -8,6 +8,7 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { ProjectCarousel } from "./ProjectCarousel";
+import Button from "../../styles/GlobalComponents/Button";
 
 interface ProjectsProps {
   animateProjects: boolean;
@@ -45,6 +46,18 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
       <ProjectContainer animateProjects={animateProjects}>
         <ProjectCarousel />
       </ProjectContainer>
+
+      <div style={{ marginInline: "auto" }}>
+        <Button>
+          <a
+            style={{ color: "white" }}
+            href="https://github.com/mostafakamal22/mostafakamal22.github.io"
+            target="_blank"
+          >
+            More Projects
+          </a>
+        </Button>
+      </div>
 
       <SectionDivider />
     </Section>
