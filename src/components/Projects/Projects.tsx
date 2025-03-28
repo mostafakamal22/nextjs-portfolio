@@ -47,7 +47,15 @@ const Projects = ({ animateProjects, setAnimateProjects }: ProjectsProps) => {
         <ProjectCarousel />
       </ProjectContainer>
 
-      <div style={{ marginInline: "auto" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          marginInline: "auto",
+        }}
+      >
         <Button>
           <a
             style={{ color: "white" }}
