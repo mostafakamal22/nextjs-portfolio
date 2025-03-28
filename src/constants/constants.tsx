@@ -9,10 +9,10 @@ import {
 } from "react-icons/di";
 import { SiAuthy, SiHtml5, SiPrisma } from "react-icons/si";
 import { IoCall } from "react-icons/io5";
-import { RiWhatsappFill } from "react-icons/ri";
+import { RiPassValidFill, RiWhatsappFill } from "react-icons/ri";
 import { GrMail } from "react-icons/gr";
 import { BsClipboardData } from "react-icons/bs";
-import { FaLanguage } from "react-icons/fa";
+import { FaEdit, FaLanguage } from "react-icons/fa";
 
 import { nanoid } from "nanoid";
 
@@ -395,7 +395,7 @@ export const technologies: readonly {
   {
     title: "Web Development Basics",
     paragraph: "HTML, CSS, JS(ES6) and TypeScript.",
-    icon: <SiHtml5 size={40} />,
+    icon: <SiHtml5 size={34} />,
     id: nanoid(),
   },
   {
@@ -412,32 +412,44 @@ export const technologies: readonly {
   },
   {
     title: "Front-End Frameworks",
-    paragraph: "ReactJS And NextJS.",
+    paragraph: "ReactJS and NextJS.",
     icon: <DiReact size={40} />,
     id: nanoid(),
   },
   {
     title: "Front-End State Management",
-    paragraph: "Redux, Zustand, Redux-Toolkit And React-Context.",
+    paragraph: "Redux, Zustand, Redux-Toolkit and React-Context.",
     icon: <DiReact size={40} />,
     id: nanoid(),
   },
   {
     title: "Front-End Data Fetching & Caching",
     paragraph:
-      "Axios, Redux Toolkit Query(RTQ), React Query And Stale-While-Revalidate(SWR).",
+      "Axios, Redux Toolkit Query(RTQ), React Query and Stale-While-Revalidate(SWR).",
     icon: <DiReact size={40} />,
     id: nanoid(),
   },
   {
+    title: "Form Handling",
+    paragraph: "React-Hook-Form and Formik.",
+    icon: <FaEdit size={32} style={{ marginLeft: "8px" }} />,
+    id: nanoid(),
+  },
+  {
+    title: "Validation Schemas",
+    paragraph: "Yup and Zod.",
+    icon: <RiPassValidFill size={30} style={{ marginLeft: "6px" }} />,
+    id: nanoid(),
+  },
+  {
     title: "Back-End",
-    paragraph: "NodeJS, MongoDB And MySql.",
+    paragraph: "NodeJS, REST API, MongoDB and MySql.",
     icon: <DiDatabase size={40} />,
     id: nanoid(),
   },
   {
     title: "Back-End Frameworks",
-    paragraph: "Express And Mongoose.",
+    paragraph: "Express and Mongoose.",
     icon: <DiMongodb size={40} />,
     id: nanoid(),
   },
@@ -449,19 +461,19 @@ export const technologies: readonly {
   },
   {
     title: "Authentication",
-    paragraph: "NextAuth And Json Web Tokens(JWT).",
+    paragraph: "NextAuth and Json Web Tokens(JWT).",
     icon: <SiAuthy size={40} />,
     id: nanoid(),
   },
   {
     title: "Unit Testing",
-    paragraph: "Jest And React Testing Library",
+    paragraph: "Jest and React Testing Library",
     icon: <DiTerminal size={40} />,
     id: nanoid(),
   },
   {
     title: "Data Visualization",
-    paragraph: "ChartJs And React-Chartjs",
+    paragraph: "ChartJs and React-Chartjs",
     icon: <BsClipboardData size={40} />,
     id: nanoid(),
   },
@@ -473,7 +485,7 @@ export const technologies: readonly {
   },
   {
     title: "Version Control",
-    paragraph: "Git And Github.",
+    paragraph: "Git and Github.",
     icon: <DiGitBranch size={40} />,
     id: nanoid(),
   },
