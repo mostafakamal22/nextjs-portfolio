@@ -64,7 +64,7 @@ export const projects: Project[] = [
       "/images/CryptoSk/CryptoSk(26).webp",
     ],
     tags: [
-      "Nextjs-V13",
+      "Nextjs",
       "Typescript",
       "Nodejs",
       "NextAuth",
@@ -367,7 +367,7 @@ export const projects: Project[] = [
       "/images/Space Tourism/Space Tourism(17).webp",
     ],
     tags: [
-      "Nextjs 13",
+      "Nextjs",
       "TypeScript",
       "TailwindCSS",
       "React-Hooks",
