@@ -290,8 +290,6 @@ export const projects: Project[] = [
       "/images/Twitter/Twitter-like-tweet-system(8).webp",
       "/images/Twitter/Twitter-like-tweet-system(9).webp",
       "/images/Twitter/Twitter-like-tweet-system(10).webp",
-      "/images/Twitter/Twitter-like-tweet-system(11).webp",
-      "/images/Twitter/Twitter-like-tweet-system(12).webp",
     ],
     tags: [
       "Reactjs",
