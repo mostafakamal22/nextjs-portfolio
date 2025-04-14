@@ -75,6 +75,8 @@ export const projects: Project[] = [
       "TailwindCSS",
       "Zustand",
       "SWR",
+      "Multi-Languages",
+      "Next-Internationalization",
     ],
     source: "https://github.com/mostafakamal22/cryptosk-website",
     visit: "https://www.cryptosk.net",
